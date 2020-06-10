@@ -1,0 +1,117 @@
+body {
+  padding: 0 200px;
+}
+
+.local_detail i {
+  font-size: 90px;
+}
+
+ul {
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.local h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-size: 45px;
+  text-transform: capitalize;
+}
+
+.local h2 {
+  font-family: "Lora", serif;
+  font-weight: 400;
+}
+
+.container {
+  display: block;
+  margin-top: 50px;
+  padding-top: 25px;
+  padding-bottom: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.search_form,
+.local,
+.local_detail {
+  margin: 0;
+  padding-left: 15px;
+}
+
+.local {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.current {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.local_detail {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.col {
+  text-align: center;
+}
+
+.forcast i {
+  margin: 0;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.day_futur {
+  margin: 0;
+  padding-bottom: 5px;
+  font-family: "Lora", serif;
+  font-weight: 400;
+}
+
+.temp_future {
+  font-family: "Roboto", sans-serif;
+}
+
+.search_form button {
+  padding: 6px 45px;
+  border-radius: 5px;
+}
+
+.search_form button:hover {
+  color: blue;
+}
+
+span.temp_digit {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  font-weight: 900;
+  font-size: 65px;
+  bottom: 8px;
+  left: 25px;
+}
+
+span.unit {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  left: 25px;
+  bottom: 40px;
+}
+
+span.unit:hover {
+  cursor: pointer;
+}
+
+.strong {
+  font-weight: 900;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
