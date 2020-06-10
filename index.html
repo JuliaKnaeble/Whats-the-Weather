@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/cbd558a607.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <title>Whats the Weather</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="search_form">
+            <div class="row">
+                <div class="col-8">
+                    <form id="search">
+                        <div class="form_group">
+                            <input type="text" class="form-control" id="city-search" placeholder="Type a city...."
+                                autocomplete="off" />
+                        </div>
+                </div>
+                <div class="col-4">
+                    <button type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="local">
+            <h1 id="city"></h1>
+            <h2 class="current">
+                <span id="date">Friday 13:00</span>
+                <br />
+                <span class="capitalize" id="weather-description"></span>
+            </h2>
+        </div>
+
+        <div class="local_detail">
+            <div class="row">
+                <div class="col-7">
+                    <p>
+                        <i class="fas fa-cloud"></i>
+                        <span class="temp_digit" id="current-temp"></span>
+                        <span class="unit">
+                            <span class="strong" id="celcius">°C</span>
+                            | <span id="fahrenheit">°F</span>
+                        </span>
+                    </p>
+                </div>
+                <div class="col-5">
+                    <ul>
+                        <li>
+                            Precipitation:&nbsp <span id="current-precipitation">5</span>%
+                        </li>
+                        <li>
+                            Humidity:&nbsp <span id="current-humidity"></span>%
+                        </li>
+                        <li>
+                            Wind:&nbsp <span id="current-wind"></span>km/h
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="forcast">
+            <div class="row">
+                <div class="col">
+                    <p class="day_futur">Thu</p>
+                    <i class="fas fa-cloud"></i>
+                    <p class="temp_futur">
+                        <strong><span id="one-max"></span>°C</strong>
+                        <br />
+                        <span id="one-min"></span>°C
+                    </p>
+                </div>
+                <div class="col">
+                    <p class="day_futur">Fri</p>
+                    <i class="fas fa-cloud"></i>
+                    <p class="temp_futur">
+                        <strong><span id="two-max"></span>°C</strong>
+                        <br />
+                        <span id="two-min"></span>°C
+                    </p>
+                </div>
+                <div class="col">
+                    <p class="day_futur">Sat</p>
+                    <i class="fas fa-cloud"></i>
+                    <p class="temp_futur">
+                        <strong><span id="three-max"></span>°C</strong>
+                        <br />
+                        <span id="three-min"></span>°C
+                    </p>
+                </div>
+                <div class="col">
+                    <p class="day_futur">Sun</p>
+                    <i class="fas fa-cloud"></i>
+                    <p class="temp_futur">
+                        <strong><span id="four-max"></span>°C</strong>
+                        <br />
+                        <span id="four-min"></span>°C
+                    </p>
+                </div>
+                <div class="col">
+                    <p class="day_futur">Mon</p>
+                    <i class="fas fa-cloud"></i>
+                    <p class="temp_futur">
+                        <strong><span id="five-max"></span>°C</strong>
+                        <br />
+                        <span id="five-min"></span>°C
+                    </p>
+                </div>
+                <div class="col">
+                    <p class="day_futur">Tue</p>
+                    <i class="fas fa-cloud"></i>
+                    <p class="temp_futur">
+                        <strong><span id="six-max"></span>°C</strong>
+                        <br />
+                        <span id="six-min"></span>°C
+                    </p>
+                </div>
+                <div class="col">
+                    <p class="day_futur">Wed</p>
+                    <i class="fas fa-cloud"></i>
+                    <p class="temp_futur">
+                        <strong><span id="seven-max"></span>°C</strong>
+                        <br />
+                        <span id="seven-min"></span>°C
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src=""></script>
+</body>
+
+</html>
