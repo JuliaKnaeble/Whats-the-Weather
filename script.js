@@ -23,8 +23,43 @@ function showTemp(response) {
     .then(showForcast);
 }
 
-// displays forcast result
+// presenting local time
+function showTime(response) {
+  let days = [
+    `Sunday`,
+    `Monday`,
+    `Tuesday`,
+    `Wednesday`,
+    `Thursday`,
+    `Friday`,
+    `Saturday`,
+  ];
+  let day = days[response.data.day_of_week];
+  let date = new Date();
+  let hour = date.getUTCHours();
+  let inte = parseInt(hour);
+  let offset = parseInt(response.data.utc_offset);
+  let totalHour = inte + offset;
+  if (totalHour === 0) {
+    totalHour = `00`;
+  } else if (totalHour < 10) {
+    totalHour = `0${totalHour}`;
+  } else totalHour = totalHour;
+  let minute = date.getMinutes();
+  if (minute === 0) {
+    minute = `00`;
+  } else if (minute < 10) {
+    minute = `0${minute}`;
+  } else minute = minute;
+  let localTimeStamp = document.querySelector(`#date`);
+  localTimeStamp.innerHTML = `${day} ${totalHour}:${minute}`;
+}
+
+// displays forcast result & set api for local time
 function showForcast(response) {
+  let timezone = response.data.timezone;
+  let timeUrl = `http://worldtimeapi.org/api/timezone/`;
+  axios.get(`${timeUrl}${timezone}`).then(showTime);
   document.querySelector(`#one-max`).innerHTML = Math.round(
     response.data.daily[0].temp.max
   );
@@ -96,26 +131,3 @@ document.querySelector(`#search`).addEventListener(`submit`, searchCity);
 
 // city on load -> function search
 search(`Berlin`);
-
-// Time Stamp (not yet connected to the api)
-let now = new Date();
-
-let days = [
-  `Sunday`,
-  `Monday`,
-  `Tuesday`,
-  `Wednesday`,
-  `Thursday`,
-  `Friday`,
-  `Saturday`,
-];
-let day = days[now.getDay()];
-let hour = now.getHours();
-let minute = now.getMinutes();
-if (minute === 0) {
-  minute = `00`;
-} else if (minute < 10) {
-  minute = `0${minute}`;
-} else minute = minute;
-
-document.querySelector(`#date`).innerHTML = `${day} ${hour}:${minute}`;
