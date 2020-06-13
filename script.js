@@ -58,7 +58,7 @@ function showTime(response) {
 // displays forcast result & set api for local time
 function showForcast(response) {
   let timezone = response.data.timezone;
-  let timeUrl = `http://worldtimeapi.org/api/timezone/`;
+  let timeUrl = `https://worldtimeapi.org/api/timezone/`;
   axios.get(`${timeUrl}${timezone}`).then(showTime);
   document.querySelector(`#one-max`).innerHTML = Math.round(
     response.data.daily[0].temp.max
