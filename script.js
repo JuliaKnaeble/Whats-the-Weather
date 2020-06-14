@@ -40,7 +40,9 @@ function showTime(response) {
   let inte = parseInt(hour);
   let offset = parseInt(response.data.utc_offset);
   let totalHour = inte + offset;
-  if (totalHour < 0) {
+  if (totalHour >= 24) {
+    totalHour = totalHour - 24;
+  } else if (totalHour < 0) {
     totalHour += 24;
   } else if (totalHour === 0) {
     totalHour = `00`;
@@ -55,6 +57,36 @@ function showTime(response) {
   } else minute = minute;
   let localTimeStamp = document.querySelector(`#date`);
   localTimeStamp.innerHTML = `${day} ${totalHour}:${minute}`;
+  let futureDays = [
+    `Sun`,
+    `Mon`,
+    `Tue`,
+    `Wed`,
+    `Thu`,
+    `Fri`,
+    `Sat`,
+    `Sun`,
+    `Mon`,
+    `Tue`,
+    `Wed`,
+    `Thu`,
+    `Fri`,
+    `Sat`,
+  ];
+  let future = futureDays[response.data.day_of_week];
+  let futurePlusOne = futureDays[response.data.day_of_week + 1];
+  let futurePlusTwo = futureDays[response.data.day_of_week + 2];
+  let futurePlusThree = futureDays[response.data.day_of_week + 3];
+  let futurePlusFour = futureDays[response.data.day_of_week + 4];
+  let futurePlusFive = futureDays[response.data.day_of_week + 5];
+  let futurePlusSix = futureDays[response.data.day_of_week + 6];
+  document.querySelector(`#today`).innerHTML = `${future}`;
+  document.querySelector(`#tomorrow`).innerHTML = `${futurePlusOne}`;
+  document.querySelector(`#day-three`).innerHTML = `${futurePlusTwo}`;
+  document.querySelector(`#day-four`).innerHTML = `${futurePlusThree}`;
+  document.querySelector(`#day-five`).innerHTML = `${futurePlusFour}`;
+  document.querySelector(`#day-six`).innerHTML = `${futurePlusFive}`;
+  document.querySelector(`#day-seven`).innerHTML = `${futurePlusSix}`;
 }
 
 // displays forcast result & set api for local time
@@ -133,3 +165,23 @@ document.querySelector(`#search`).addEventListener(`submit`, searchCity);
 
 // city on load -> function search
 search(`Berlin`);
+
+//for (
+//let testDay = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
+//testDay[0];
+// testDay++
+//) {
+//let firstDay = document.querySelector(`#today`);
+// firstDay.innerHTML = testDay;
+//console.log(testDay);
+//}
+
+//for (let step = 0; step < 5; step++) {
+// Runs 5 times, with values of step 0 through 4.
+//console.log('Walking east one step');
+//}
+
+//let testDay = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
+//console.log(testDay[1]);
+//let firstDay = document.querySelector(`#today`);
+//firstDay.innerHTML = testDay[1];
