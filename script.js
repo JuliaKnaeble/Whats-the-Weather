@@ -40,7 +40,9 @@ function showTime(response) {
   let inte = parseInt(hour);
   let offset = parseInt(response.data.utc_offset);
   let totalHour = inte + offset;
-  if (totalHour === 0) {
+  if (totalHour < 0) {
+    totalHour += 24;
+  } else if (totalHour === 0) {
     totalHour = `00`;
   } else if (totalHour < 10) {
     totalHour = `0${totalHour}`;
