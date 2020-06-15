@@ -1,9 +1,13 @@
 body {
-  padding: 0 200px;
+  padding: 15px 130px;
+  background-color: #f9fbfc;
+  border: 10px solid white;
 }
 
 .local_detail img {
-  width: 40%;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 ul {
@@ -14,35 +18,21 @@ ul {
 }
 
 .local h1 {
+  text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
-  font-size: 45px;
+  font-size: 40px;
   text-transform: capitalize;
 }
 
 .local h2 {
+  text-align: center;
   font-family: "Lora", serif;
   font-weight: 400;
 }
 
-.container {
-  display: block;
-  margin-top: 50px;
-  padding-top: 25px;
-  padding-bottom: 5px;
-  border: 1px solid black;
-  border-radius: 10px;
-}
-
-.search_form,
-.local,
-.local_detail {
-  margin: 0;
-  padding-left: 15px;
-}
-
 .local {
-  padding-top: 10px;
+  padding-top: 40px;
   padding-bottom: 5px;
 }
 
@@ -53,20 +43,14 @@ ul {
 
 .local_detail {
   padding-top: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 90px;
 }
 
 .col {
   text-align: center;
 }
 
-.forcast i {
-  margin: 0;
-  font-size: 30px;
-  line-height: 30px;
-}
-
-.day_futur {
+.day_future {
   margin: 0;
   padding-bottom: 5px;
   font-family: "Lora", serif;
@@ -74,38 +58,40 @@ ul {
 }
 
 .temp_future {
+  margin: 0;
   font-family: "Roboto", sans-serif;
+  padding-top: 15px;
 }
 
-.search_form button {
-  padding: 6px 45px;
-  border-radius: 5px;
+.search_form input {
+  display: block;
+  margin: 0 auto;
+  width: 65%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 50px;
+  padding-left: 25px;
+  border: 1px solid #ced2d4;
+  background-color: #f9fbfc;
+  text-align: left;
 }
 
-.search_form button:hover {
-  color: blue;
-}
-
-span.temp_digit {
+.temp_digit {
   font-family: "Roboto", sans-serif;
-  position: relative;
   font-weight: 900;
-  font-size: 65px;
-  bottom: 8px;
-  left: 25px;
+  font-size: 35px;
+  position: relative;
+  left: 350px;
+  top: 50px;
 }
 
-span.unit {
+.unit {
   font-family: "Roboto", sans-serif;
-  position: relative;
   font-weight: 400;
   font-size: 18px;
-  left: 25px;
-  bottom: 40px;
-}
-
-span.unit:hover {
-  cursor: pointer;
+  position: relative;
+  left: 355px;
+  top: 35px;
 }
 
 .strong {
@@ -117,7 +103,7 @@ span.unit:hover {
 }
 
 footer {
-  padding-top: 8px;
+  padding-top: 35px;
   padding-left: 5px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -133,4 +119,24 @@ footer a:hover {
   font-weight: 600;
   color: rgb(23, 141, 141);
   text-decoration: none;
+}
+
+.temp_circle {
+  width: 70%;
+}
+
+.page_name {
+  position: relative;
+  right: 10%;
+  bottom: 10px;
+}
+.temp_conversion {
+  position: relative;
+  left: 90%;
+  bottom: 10px;
+}
+
+header {
+  font-weight: 900;
+  font-size: 25px;
 }

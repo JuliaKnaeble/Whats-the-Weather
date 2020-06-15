@@ -1,6 +1,5 @@
 // displaying the value of the search and calls forcast api -> function show forcast
 function showTemp(response) {
-  console.log(response.data.weather[0].icon);
   document.querySelector(`#city`).innerHTML = response.data.name;
   document.querySelector(`#current-temp`).innerHTML = Math.round(
     response.data.main.temp
@@ -17,10 +16,7 @@ function showTemp(response) {
   console.log(weatherIcon);
   document
     .querySelector(`#main-icon`)
-    .setAttribute(
-      "src",
-      `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
-    );
+    .setAttribute("src", `asset/${weatherIcon}.png`);
   let latitude = response.data.coord.lat;
   let longitude = response.data.coord.lon;
   let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
@@ -174,23 +170,3 @@ document.querySelector(`#search`).addEventListener(`submit`, searchCity);
 
 // city on load -> function search
 search(`Berlin`);
-
-//for (
-//let testDay = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
-//testDay[0];
-// testDay++
-//) {
-//let firstDay = document.querySelector(`#today`);
-// firstDay.innerHTML = testDay;
-//console.log(testDay);
-//}
-
-//for (let step = 0; step < 5; step++) {
-// Runs 5 times, with values of step 0 through 4.
-//console.log('Walking east one step');
-//}
-
-//let testDay = [`Sun`, `Mon`, `Tue`, `Wed`, `Thu`, `Fri`, `Sat`];
-//console.log(testDay[1]);
-//let firstDay = document.querySelector(`#today`);
-//firstDay.innerHTML = testDay[1];

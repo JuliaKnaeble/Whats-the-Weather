@@ -12,28 +12,23 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    <title>Whats the Weather</title>
+    <title>CircleCast</title>
 </head>
 
 <body>
     <div class="container">
+    <div>
+        <header>
+            <span class ="page_name">CircleCast</span>
+            <span class ="temp_conversion">C | F</span>
+        </header>
+    </div>
 
         <div class="search_form">
-            <div class="row">
-                <div class="col-8">
                     <form id="search">
-                        <div class="form_group">
-                            <input type="text" class="form-control" id="city-search" placeholder="Type a city...."
+                            <input type="text" class ="search_field" id="city-search" placeholder="Search for a city"
                                 autocomplete="off" />
-                        </div>
-                </div>
-                <div class="col-4">
-                    <button type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
         </div>
-
         <div class="local">
             <h1 id="city"></h1>
             <h2 class="current">
@@ -45,15 +40,16 @@
 
         <div class="local_detail">
             <div class="row">
-                <div class="col-7">
+                <div class="col-5">
                     <p>
-                        <img src="" alt="Weather Icon" id ="main-icon">
                         <span class="temp_digit" id="current-temp"></span>
                         <span class="unit">
-                            <span class="strong" id="celcius">°C</span>
-                            | <span id="fahrenheit">°F</span>
+                            <span class="strong">°C</span>
                         </span>
                     </p>
+                </div>
+                <div class="col-2">
+                    <img src="asset/02d.png" alt="Weather Icon" id="main-icon" class ="icon_center">
                 </div>
                 <div class="col-5">
                     <ul>
@@ -74,67 +70,61 @@
         <div class="forcast">
             <div class="row">
                 <div class="col">
-                    <p class="day_futur" id ="today"></p>
-                    <i class="fas fa-cloud"></i>
-                    <p class="temp_futur">
-                        <strong><span id="one-max"></span>°C</strong>
-                        <br />
-                        <span id="one-min"></span>°C
+                    <img src="asset/01d.png" alt="Temp" class="temp_circle">
+                    <p class="temp_future">
+                        <strong><span id="one-max"></span>°C /
+                        <span id="one-min"></span>°C</strong>
                     </p>
+                    <p class="day_future" id ="today"></p>
                 </div>
                 <div class="col">
-                    <p class="day_futur" id ="tomorrow"></p>
-                    <i class="fas fa-cloud"></i>
-                    <p class="temp_futur">
-                        <strong><span id="two-max"></span>°C</strong>
-                        <br />
-                        <span id="two-min"></span>°C
+                    <img src="asset/03d.png" alt="Temp" class="temp_circle">
+                    <p class="temp_future">
+                        <strong><span id="two-max"></span>°C /
+                        <span id="two-min"></span>°C</strong>
                     </p>
+                    <p class="day_future" id ="tomorrow"></p>
                 </div>
                 <div class="col">
-                    <p class="day_futur" id="day-three"></p>
-                    <i class="fas fa-cloud"></i>
-                    <p class="temp_futur">
-                        <strong><span id="three-max"></span>°C</strong>
-                        <br />
-                        <span id="three-min"></span>°C
+                    <img src="asset/02d.png" alt="Temp" class="temp_circle">
+                    <p class="temp_future">
+                        <strong><span id="three-max"></span>°C /
+                        <span id="three-min"></span>°C</strong>
                     </p>
+                    <p class="day_future" id="day-three"></p>
                 </div>
                 <div class="col">
-                    <p class="day_futur" id ="day-four"></p>
-                    <i class="fas fa-cloud"></i>
-                    <p class="temp_futur">
-                        <strong><span id="four-max"></span>°C</strong>
-                        <br />
-                        <span id="four-min"></span>°C
+                    <img src="asset/04d.png" alt="Temp" class="temp_circle">
+                    <p class="temp_future">
+                        <strong><span id="four-max"></span>°C /
+                        <span id="four-min"></span>°C</strong>
                     </p>
+                    <p class="day_future" id ="day-four"></p>
                 </div>
                 <div class="col">
-                    <p class="day_futur" id ="day-five"></p>
-                    <i class="fas fa-cloud"></i>
-                    <p class="temp_futur">
-                        <strong><span id="five-max"></span>°C</strong>
-                        <br />
-                        <span id="five-min"></span>°C
+                    <img src="asset/02d.png" alt="Temp" class="temp_circle">
+                    <p class="temp_future">
+                        <strong><span id="five-max"></span>°C /
+                        <span id="five-min"></span>°C</strong>
                     </p>
+                    <p class="day_future" id ="day-five"></p>
                 </div>
                 <div class="col">
-                    <p class="day_futur" id="day-six"></p>
-                    <i class="fas fa-cloud"></i>
-                    <p class="temp_futur">
-                        <strong><span id="six-max"></span>°C</strong>
-                        <br />
-                        <span id="six-min"></span>°C
+                    <img src="asset/01d.png" alt="Temp" class="temp_circle">
+                    <p class="temp_future">
+                        <strong><span id="six-max"></span>°C /
+                        <span id="six-min"></span>°C</strong>
                     </p>
+                    <p class="day_future" id="day-six"></p>
                 </div>
                 <div class="col">
-                    <p class="day_futur" id="day-seven"></p>
-                    <i class="fas fa-cloud"></i>
-                    <p class="temp_futur">
-                        <strong><span id="seven-max"></span>°C</strong>
-                        <br />
-                        <span id="seven-min"></span>°C
+                    
+                    <img src="asset/04d.png" alt="Temp" class = "temp_circle">
+                    <p class="temp_future">
+                        <strong><span id="seven-max"></span>°C /
+                        <span id="seven-min"></span>°C</strong>
                     </p>
+                    <p class="day_future" id="day-seven"></p>
                 </div>
             </div>
 
