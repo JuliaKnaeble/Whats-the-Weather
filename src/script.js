@@ -1,5 +1,6 @@
 // displaying the value of the search and calls forcast api -> function show forcast
 function showTemp(response) {
+  console.log(response.data.weather[0].icon);
   document.querySelector(`#city`).innerHTML = response.data.name;
   document.querySelector(`#current-temp`).innerHTML = Math.round(
     response.data.main.temp
@@ -12,6 +13,14 @@ function showTemp(response) {
   document.querySelector(`#current-humidity`).innerHTML = Math.round(
     response.data.main.humidity
   );
+  let weatherIcon = response.data.weather[0].icon;
+  console.log(weatherIcon);
+  document
+    .querySelector(`#main-icon`)
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${weatherIcon}@2x.png`
+    );
   let latitude = response.data.coord.lat;
   let longitude = response.data.coord.lon;
   let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;

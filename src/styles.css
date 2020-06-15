@@ -2,8 +2,8 @@ body {
   padding: 0 200px;
 }
 
-.local_detail i {
-  font-size: 90px;
+.local_detail img {
+  width: 40%;
 }
 
 ul {
