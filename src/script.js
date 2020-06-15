@@ -96,6 +96,7 @@ function showTime(response) {
 
 // displays forcast result & set api for local time
 function showForcast(response) {
+  console.log(response.data);
   let timezone = response.data.timezone;
   let timeUrl = `https://worldtimeapi.org/api/timezone/`;
   axios.get(`${timeUrl}${timezone}`).then(showTime);
@@ -147,6 +148,41 @@ function showForcast(response) {
   document.querySelector(`#seven-min`).innerHTML = Math.round(
     response.data.daily[6].temp.min
   );
+  let weatherIconOne = response.data.daily[0].weather[0].icon;
+  console.log(weatherIconOne);
+  document
+    .querySelector(`#icon-one`)
+    .setAttribute("src", `asset/${weatherIconOne}.png`);
+  let weatherIconTwo = response.data.daily[1].weather[0].icon;
+  console.log(weatherIconTwo);
+  document
+    .querySelector(`#icon-two`)
+    .setAttribute("src", `asset/${weatherIconTwo}.png`);
+  let weatherIconThree = response.data.daily[2].weather[0].icon;
+  console.log(weatherIconThree);
+  document
+    .querySelector(`#icon-three`)
+    .setAttribute("src", `asset/${weatherIconThree}.png`);
+  let weatherIconFour = response.data.daily[3].weather[0].icon;
+  console.log(weatherIconFour);
+  document
+    .querySelector(`#icon-four`)
+    .setAttribute("src", `asset/${weatherIconFour}.png`);
+  let weatherIconFive = response.data.daily[4].weather[0].icon;
+  console.log(weatherIconFive);
+  document
+    .querySelector(`#icon-five`)
+    .setAttribute("src", `asset/${weatherIconFive}.png`);
+  let weatherIconSix = response.data.daily[5].weather[0].icon;
+  console.log(weatherIconSix);
+  document
+    .querySelector(`#icon-six`)
+    .setAttribute("src", `asset/${weatherIconSix}.png`);
+  let weatherIconSeven = response.data.daily[6].weather[0].icon;
+  console.log(weatherIconSeven);
+  document
+    .querySelector(`#icon-seven`)
+    .setAttribute("src", `asset/${weatherIconSeven}.png`);
 }
 
 // Makes the api call on load & on search -> function show Temp
