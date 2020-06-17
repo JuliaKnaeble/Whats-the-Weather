@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
 }
 
-.main_circle {
+.big_circle {
   height: 160px;
   width: 160px;
   border-radius: 50%;
@@ -95,6 +95,7 @@ ul {
   border: 1px solid #ced2d4;
   background-color: #fafafa;
   text-align: left;
+  outline: none;
 }
 
 .strong {
@@ -145,75 +146,4 @@ footer a:hover {
 .temp_seperator {
   font-weight: 400;
   color: #ced2d4;
-}
-
-.search_form i {
-  text-align: right;
-}
-
-.color_a {
-  background-color: #f66c61;
-}
-
-.color_b {
-  background-color: #f67d5f;
-}
-
-.color_c {
-  background-color: #f78a5e;
-}
-
-.color_d {
-  background-color: #f7955c;
-}
-
-.color_e {
-  background-color: #f8a35a;
-}
-
-.color_f {
-  background-color: #f8af58;
-}
-
-.color_g {
-  background-color: #f9bb56;
-}
-
-.color_h {
-  background-color: #f8cc70;
-}
-
-.color_i {
-  background-color: #f3dda7;
-}
-.color_j {
-  background-color: #e7f0f4;
-}
-
-.color_k {
-  background-color: #dbe9ff;
-}
-
-.color_l {
-  background-color: #bacfff;
-}
-
-.color_m {
-  background-color: #9bb6ff;
-}
-
-.color_n {
-  background-color: #889dff;
-}
-
-.color_o {
-  background-color: #8281ff;
-}
-
-.color_p {
-  background-color: #7c60ff;
-}
-
-.color_pp {
-  background-color: rgba(30, 139, 195, 0.3);
 }

@@ -144,269 +144,283 @@ function showForcast(response) {
   );
 
   let currentTemp = Math.round(response.data.current.temp);
-  if (currentTemp >= 25) {
-    currentTemp = document.querySelector(`#main-icon`).classList.add(`color_a`);
+  if (currentTemp >= 45) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#f66c61`;
+  } else if (currentTemp >= 40) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#f67d5f`;
+  } else if (currentTemp >= 35) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#f78a5e`;
+  } else if (currentTemp >= 30) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#f7955c`;
+  } else if (currentTemp >= 25) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#f8a35a`;
+  } else if (currentTemp >= 20) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#f8af58`;
+  } else if (currentTemp >= 15) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#f9bb56`;
+  } else if (currentTemp >= 10) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#f8cc70`;
+  } else if (currentTemp >= 5) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#f3dda7`;
+  } else if (currentTemp >= 0) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#e7f0f4`;
+  } else if (currentTemp >= -5) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#dbe9ff`;
+  } else if (currentTemp >= -10) {
+    document.querySelector(`main-circle`).style.backgroundColor = `#bacfff`;
+  } else if (currentTemp >= -15) {
+    document.querySelector(`main-circle`).style.backgroundColor = `#9bb6ff`;
+  } else if (currentTemp >= -20) {
+    document.querySelector(`main-circle`).style.backgroundColor = `#889dff`;
+  } else if (currentTemp >= -25) {
+    document.querySelector(`main-circle`).style.backgroundColor = `#8281ff`;
   } else {
-    document.querySelector(`#main-icon`).classList.add(`color_pp`);
+    document.querySelector(`main-circle`).style.backgroundColor = `#7c60ff`;
   }
 
   let upcommingTempOne = Math.round(response.data.daily[0].temp.max);
   if (upcommingTempOne >= 45) {
-    upcommingTempOne = document
-      .querySelector(`#circle-one`)
-      .classList.add(`color_a`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#f66c61`;
   } else if (upcommingTempOne >= 40) {
-    document.querySelector(`#circle-one`).classList.add(`color_b`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#f67d5f`;
   } else if (upcommingTempOne >= 35) {
-    document.querySelector(`#circle-one`).classList.add(`color_c`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#f78a5e`;
   } else if (upcommingTempOne >= 30) {
-    document.querySelector(`#circle-one`).classList.add(`color_d`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#f7955c`;
   } else if (upcommingTempOne >= 25) {
-    document.querySelector(`#circle-one`).classList.add(`color_e`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#f8a35a`;
   } else if (upcommingTempOne >= 20) {
-    document.querySelector(`#circle-one`).classList.add(`color_f`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#f8af58`;
   } else if (upcommingTempOne >= 15) {
-    document.querySelector(`#circle-one`).classList.add(`color_g`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#f9bb56`;
   } else if (upcommingTempOne >= 10) {
-    document.querySelector(`#circle-one`).classList.add(`color_h`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#f8cc70`;
   } else if (upcommingTempOne >= 5) {
-    document.querySelector(`#circle-one`).classList.add(`color_i`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#f3dda7`;
   } else if (upcommingTempOne >= 0) {
-    document.querySelector(`#circle-one`).classList.add(`color_j`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#e7f0f4`;
   } else if (upcommingTempOne >= -5) {
-    document.querySelector(`#circle-one`).classList.add(`color_k`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#dbe9ff`;
   } else if (upcommingTempOne >= -10) {
-    document.querySelector(`#circle-one`).classList.add(`color_l`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#bacfff`;
   } else if (upcommingTempOne >= -15) {
-    document.querySelector(`#circle-one`).classList.add(`color_m`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#9bb6ff`;
   } else if (upcommingTempOne >= -20) {
-    document.querySelector(`#circle-one`).classList.add(`color_n`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#889dff`;
   } else if (upcommingTempOne >= -25) {
-    document.querySelector(`#circle-one`).classList.add(`color_o`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#8281ff`;
   } else {
-    document.querySelector(`#circle-one`).classList.add(`color_p`);
+    document.querySelector(`#circle-one`).style.backgroundColor = `#7c60ff`;
   }
 
   let upcommingTempTwo = Math.round(response.data.daily[1].temp.max);
   if (upcommingTempTwo >= 45) {
-    upcommingTempTwo = document
-      .querySelector(`#circle-two`)
-      .classList.add(`color_a`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#f66c61`;
   } else if (upcommingTempTwo >= 40) {
-    document.querySelector(`#circle-two`).classList.add(`color_b`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#f67d5f`;
   } else if (upcommingTempTwo >= 35) {
-    document.querySelector(`#circle-two`).classList.add(`color_c`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#f78a5e`;
   } else if (upcommingTempTwo >= 30) {
-    document.querySelector(`#circle-two`).classList.add(`color_d`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#f7955c`;
   } else if (upcommingTempTwo >= 25) {
-    document.querySelector(`#circle-two`).classList.add(`color_e`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#f8a35a`;
   } else if (upcommingTempTwo >= 20) {
-    document.querySelector(`#circle-two`).classList.add(`color_f`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#f8af58`;
   } else if (upcommingTempTwo >= 15) {
-    document.querySelector(`#circle-two`).classList.add(`color_g`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#f9bb56`;
   } else if (upcommingTempTwo >= 10) {
-    document.querySelector(`#circle-two`).classList.add(`color_h`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#f8cc70`;
   } else if (upcommingTempTwo >= 5) {
-    document.querySelector(`#circle-two`).classList.add(`color_i`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#f3dda7`;
   } else if (upcommingTempTwo >= 0) {
-    document.querySelector(`#circle-two`).classList.add(`color_j`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#e7f0f4`;
   } else if (upcommingTempTwo >= -5) {
-    document.querySelector(`#circle-two`).classList.add(`color_k`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#dbe9ff`;
   } else if (upcommingTempTwo >= -10) {
-    document.querySelector(`#circle-two`).classList.add(`color_l`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#bacfff`;
   } else if (upcommingTempTwo >= -15) {
-    document.querySelector(`#circle-two`).classList.add(`color_m`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#9bb6ff`;
   } else if (upcommingTempTwo >= -20) {
-    document.querySelector(`#circle-two`).classList.add(`color_n`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#889dff`;
   } else if (upcommingTempTwo >= -25) {
-    document.querySelector(`#circle-two`).classList.add(`color_o`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#8281ff`;
   } else {
-    document.querySelector(`#circle-two`).classList.add(`color_p`);
+    document.querySelector(`#circle-two`).style.backgroundColor = `#7c60ff`;
   }
 
   let upcommingTempThree = Math.round(response.data.daily[2].temp.max);
   if (upcommingTempThree >= 45) {
-    upcommingTempThree = document
-      .querySelector(`#circle-three`)
-      .classList.add(`color_a`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#f66c61`;
   } else if (upcommingTempThree >= 40) {
-    document.querySelector(`#circle-three`).classList.add(`color_b`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#f67d5f`;
   } else if (upcommingTempThree >= 35) {
-    document.querySelector(`#circle-three`).classList.add(`color_c`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#f78a5e`;
   } else if (upcommingTempThree >= 30) {
-    document.querySelector(`#circle-three`).classList.add(`color_d`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#f7955c`;
   } else if (upcommingTempThree >= 25) {
-    document.querySelector(`#circle-three`).classList.add(`color_e`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#f8a35a`;
   } else if (upcommingTempThree >= 20) {
-    document.querySelector(`#circle-three`).classList.add(`color_f`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#f8af58`;
   } else if (upcommingTempThree >= 15) {
-    document.querySelector(`#circle-three`).classList.add(`color_g`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#f9bb56`;
   } else if (upcommingTempThree >= 10) {
-    document.querySelector(`#circle-three`).classList.add(`color_h`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#f8cc70`;
   } else if (upcommingTempThree >= 5) {
-    document.querySelector(`#circle-three`).classList.add(`color_i`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#f3dda7`;
   } else if (upcommingTempThree >= 0) {
-    document.querySelector(`#circle-three`).classList.add(`color_j`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#e7f0f4`;
   } else if (upcommingTempThree >= -5) {
-    document.querySelector(`#circle-three`).classList.add(`color_k`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#dbe9ff`;
   } else if (upcommingTempThree >= -10) {
-    document.querySelector(`#circle-three`).classList.add(`color_l`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#bacfff`;
   } else if (upcommingTempThree >= -15) {
-    document.querySelector(`#circle-three`).classList.add(`color_m`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#9bb6ff`;
   } else if (upcommingTempThree >= -20) {
-    document.querySelector(`#circle-three`).classList.add(`color_n`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#889dff`;
   } else if (upcommingTempThree >= -25) {
-    document.querySelector(`#circle-three`).classList.add(`color_o`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#8281ff`;
   } else {
-    document.querySelector(`#circle-three`).classList.add(`color_p`);
+    document.querySelector(`#circle-three`).style.backgroundColor = `#7c60ff`;
   }
 
   let upcommingTempFour = Math.round(response.data.daily[3].temp.max);
   if (upcommingTempFour >= 45) {
-    upcommingTempFour = document
-      .querySelector(`#circle-four`)
-      .classList.add(`color_a`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#f66c61`;
   } else if (upcommingTempFour >= 40) {
-    document.querySelector(`#circle-four`).classList.add(`color_b`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#f67d5f`;
   } else if (upcommingTempFour >= 35) {
-    document.querySelector(`#circle-four`).classList.add(`color_c`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#f78a5e`;
   } else if (upcommingTempFour >= 30) {
-    document.querySelector(`#circle-four`).classList.add(`color_d`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#f7955c`;
   } else if (upcommingTempFour >= 25) {
-    document.querySelector(`#circle-four`).classList.add(`color_e`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#f8a35a`;
   } else if (upcommingTempFour >= 20) {
-    document.querySelector(`#circle-four`).classList.add(`color_f`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#f8af58`;
   } else if (upcommingTempFour >= 15) {
-    document.querySelector(`#circle-four`).classList.add(`color_g`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#f9bb56`;
   } else if (upcommingTempFour >= 10) {
-    document.querySelector(`#circle-four`).classList.add(`color_h`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#f8cc70`;
   } else if (upcommingTempFour >= 5) {
-    document.querySelector(`#circle-four`).classList.add(`color_i`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#f3dda7`;
   } else if (upcommingTempFour >= 0) {
-    document.querySelector(`#circle-four`).classList.add(`color_j`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#e7f0f4`;
   } else if (upcommingTempFour >= -5) {
-    document.querySelector(`#circle-four`).classList.add(`color_k`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#dbe9ff`;
   } else if (upcommingTempFour >= -10) {
-    document.querySelector(`#circle-four`).classList.add(`color_l`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#bacfff`;
   } else if (upcommingTempFour >= -15) {
-    document.querySelector(`#circle-four`).classList.add(`color_m`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#9bb6ff`;
   } else if (upcommingTempFour >= -20) {
-    document.querySelector(`#circle-four`).classList.add(`color_n`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#889dff`;
   } else if (upcommingTempFour >= -25) {
-    document.querySelector(`#circle-four`).classList.add(`color_o`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#8281ff`;
   } else {
-    document.querySelector(`#circle-four`).classList.add(`color_p`);
+    document.querySelector(`#circle-four`).style.backgroundColor = `#7c60ff`;
   }
 
   let upcommingTempFive = Math.round(response.data.daily[4].temp.max);
   if (upcommingTempFive >= 45) {
-    upcommingTempFive = document
-      .querySelector(`#circle-five`)
-      .classList.add(`color_a`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#f66c61`;
   } else if (upcommingTempFive >= 40) {
-    document.querySelector(`#circle-five`).classList.add(`color_b`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#f67d5f`;
   } else if (upcommingTempFive >= 35) {
-    document.querySelector(`#circle-five`).classList.add(`color_c`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#f78a5e`;
   } else if (upcommingTempFive >= 30) {
-    document.querySelector(`#circle-five`).classList.add(`color_d`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#f7955c`;
   } else if (upcommingTempFive >= 25) {
-    document.querySelector(`#circle-five`).classList.add(`color_e`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#f8a35a`;
   } else if (upcommingTempFive >= 20) {
-    document.querySelector(`#circle-five`).classList.add(`color_f`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#f8af58`;
   } else if (upcommingTempFive >= 15) {
-    document.querySelector(`#circle-five`).classList.add(`color_g`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#f9bb56`;
   } else if (upcommingTempFive >= 10) {
-    document.querySelector(`#circle-five`).classList.add(`color_h`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#f8cc70`;
   } else if (upcommingTempFive >= 5) {
-    document.querySelector(`#circle-five`).classList.add(`color_i`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#f3dda7`;
   } else if (upcommingTempFive >= 0) {
-    document.querySelector(`#circle-five`).classList.add(`color_j`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#e7f0f4`;
   } else if (upcommingTempFive >= -5) {
-    document.querySelector(`#circle-five`).classList.add(`color_k`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#dbe9ff`;
   } else if (upcommingTempFive >= -10) {
-    document.querySelector(`#circle-five`).classList.add(`color_l`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#bacfff`;
   } else if (upcommingTempFive >= -15) {
-    document.querySelector(`#circle-five`).classList.add(`color_m`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#9bb6ff`;
   } else if (upcommingTempFive >= -20) {
-    document.querySelector(`#circle-five`).classList.add(`color_n`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#889dff`;
   } else if (upcommingTempFive >= -25) {
-    document.querySelector(`#circle-five`).classList.add(`color_o`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#8281ff`;
   } else {
-    document.querySelector(`#circle-five`).classList.add(`color_p`);
+    document.querySelector(`#circle-five`).style.backgroundColor = `#7c60ff`;
   }
 
   let upcommingTempSix = Math.round(response.data.daily[5].temp.max);
   if (upcommingTempSix >= 45) {
-    upcommingTempSix = document
-      .querySelector(`#circle-six`)
-      .classList.add(`color_a`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#f66c61`;
   } else if (upcommingTempSix >= 40) {
-    document.querySelector(`#circle-six`).classList.add(`color_b`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#f67d5f`;
   } else if (upcommingTempSix >= 35) {
-    document.querySelector(`#circle-six`).classList.add(`color_c`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#f78a5e`;
   } else if (upcommingTempSix >= 30) {
-    document.querySelector(`#circle-six`).classList.add(`color_d`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#f7955c`;
   } else if (upcommingTempSix >= 25) {
-    document.querySelector(`#circle-six`).classList.add(`color_e`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#f8a35a`;
   } else if (upcommingTempSix >= 20) {
-    document.querySelector(`#circle-six`).classList.add(`color_f`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#f8af58`;
   } else if (upcommingTempSix >= 15) {
-    document.querySelector(`#circle-six`).classList.add(`color_g`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#f9bb56`;
   } else if (upcommingTempSix >= 10) {
-    document.querySelector(`#circle-six`).classList.add(`color_h`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#f8cc70`;
   } else if (upcommingTempSix >= 5) {
-    document.querySelector(`#circle-six`).classList.add(`color_i`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#f3dda7`;
   } else if (upcommingTempSix >= 0) {
-    document.querySelector(`#circle-six`).classList.add(`color_j`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#e7f0f4`;
   } else if (upcommingTempSix >= -5) {
-    document.querySelector(`#circle-six`).classList.add(`color_k`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#dbe9ff`;
   } else if (upcommingTempSix >= -10) {
-    document.querySelector(`#circle-six`).classList.add(`color_l`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#bacfff`;
   } else if (upcommingTempSix >= -15) {
-    document.querySelector(`#circle-six`).classList.add(`color_m`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#9bb6ff`;
   } else if (upcommingTempSix >= -20) {
-    document.querySelector(`#circle-six`).classList.add(`color_n`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#889dff`;
   } else if (upcommingTempSix >= -25) {
-    document.querySelector(`#circle-six`).classList.add(`color_o`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#8281ff`;
   } else {
-    document.querySelector(`#circle-six`).classList.add(`color_p`);
+    document.querySelector(`#circle-six`).style.backgroundColor = `#7c60ff`;
   }
 
   let upcommingTempSeven = Math.round(response.data.daily[6].temp.max);
   if (upcommingTempSeven >= 45) {
-    upcommingTempSeven = document
-      .querySelector(`#circle-seven`)
-      .classList.add(`color_a`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#f66c61`;
   } else if (upcommingTempSeven >= 40) {
-    document.querySelector(`#circle-seven`).classList.add(`color_b`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#f67d5f`;
   } else if (upcommingTempSeven >= 35) {
-    document.querySelector(`#circle-seven`).classList.add(`color_c`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#f78a5e`;
   } else if (upcommingTempSeven >= 30) {
-    document.querySelector(`#circle-seven`).classList.add(`color_d`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#f7955c`;
   } else if (upcommingTempSeven >= 25) {
-    document.querySelector(`#circle-seven`).classList.add(`color_e`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#f8a35a`;
   } else if (upcommingTempSeven >= 20) {
-    document.querySelector(`#circle-seven`).classList.add(`color_f`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#f8af58`;
   } else if (upcommingTempSeven >= 15) {
-    document.querySelector(`#circle-seven`).classList.add(`color_g`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#f9bb56`;
   } else if (upcommingTempSeven >= 10) {
-    document.querySelector(`#circle-seven`).classList.add(`color_h`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#f8cc70`;
   } else if (upcommingTempSeven >= 5) {
-    document.querySelector(`#circle-seven`).classList.add(`color_i`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#f3dda7`;
   } else if (upcommingTempSeven >= 0) {
-    document.querySelector(`#circle-seven`).classList.add(`color_j`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#e7f0f4`;
   } else if (upcommingTempSeven >= -5) {
-    document.querySelector(`#circle-seven`).classList.add(`color_k`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#dbe9ff`;
   } else if (upcommingTempSeven >= -10) {
-    document.querySelector(`#circle-seven`).classList.add(`color_l`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#bacfff`;
   } else if (upcommingTempSeven >= -15) {
-    document.querySelector(`#circle-seven`).classList.add(`color_m`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#9bb6ff`;
   } else if (upcommingTempSeven >= -20) {
-    document.querySelector(`#circle-seven`).classList.add(`color_n`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#889dff`;
   } else if (upcommingTempSeven >= -25) {
-    document.querySelector(`#circle-seven`).classList.add(`color_o`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#8281ff`;
   } else {
-    document.querySelector(`#circle-seven`).classList.add(`color_p`);
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#7c60ff`;
   }
 }
 
