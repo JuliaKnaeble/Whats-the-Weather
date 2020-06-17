@@ -12,11 +12,6 @@ function showTemp(response) {
   document.querySelector(`#current-humidity`).innerHTML = Math.round(
     response.data.main.humidity
   );
-  let weatherIcon = response.data.weather[0].icon;
-  console.log(weatherIcon);
-  document
-    .querySelector(`#main-icon`)
-    .setAttribute("src", `asset/${weatherIcon}.png`);
   let latitude = response.data.coord.lat;
   let longitude = response.data.coord.lon;
   let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
@@ -94,9 +89,8 @@ function showTime(response) {
   document.querySelector(`#day-seven`).innerHTML = `${futurePlusSix}`;
 }
 
-// displays forcast result & set api for local time
+// displays forcast result & color & set api for local time
 function showForcast(response) {
-  console.log(response.data);
   let timezone = response.data.timezone;
   let timeUrl = `https://worldtimeapi.org/api/timezone/`;
   axios.get(`${timeUrl}${timezone}`).then(showTime);
@@ -148,41 +142,272 @@ function showForcast(response) {
   document.querySelector(`#seven-min`).innerHTML = Math.round(
     response.data.daily[6].temp.min
   );
-  let weatherIconOne = response.data.daily[0].weather[0].icon;
-  console.log(weatherIconOne);
-  document
-    .querySelector(`#icon-one`)
-    .setAttribute("src", `asset/${weatherIconOne}.png`);
-  let weatherIconTwo = response.data.daily[1].weather[0].icon;
-  console.log(weatherIconTwo);
-  document
-    .querySelector(`#icon-two`)
-    .setAttribute("src", `asset/${weatherIconTwo}.png`);
-  let weatherIconThree = response.data.daily[2].weather[0].icon;
-  console.log(weatherIconThree);
-  document
-    .querySelector(`#icon-three`)
-    .setAttribute("src", `asset/${weatherIconThree}.png`);
-  let weatherIconFour = response.data.daily[3].weather[0].icon;
-  console.log(weatherIconFour);
-  document
-    .querySelector(`#icon-four`)
-    .setAttribute("src", `asset/${weatherIconFour}.png`);
-  let weatherIconFive = response.data.daily[4].weather[0].icon;
-  console.log(weatherIconFive);
-  document
-    .querySelector(`#icon-five`)
-    .setAttribute("src", `asset/${weatherIconFive}.png`);
-  let weatherIconSix = response.data.daily[5].weather[0].icon;
-  console.log(weatherIconSix);
-  document
-    .querySelector(`#icon-six`)
-    .setAttribute("src", `asset/${weatherIconSix}.png`);
-  let weatherIconSeven = response.data.daily[6].weather[0].icon;
-  console.log(weatherIconSeven);
-  document
-    .querySelector(`#icon-seven`)
-    .setAttribute("src", `asset/${weatherIconSeven}.png`);
+
+  let currentTemp = Math.round(response.data.current.temp);
+  if (currentTemp >= 25) {
+    currentTemp = document.querySelector(`#main-icon`).classList.add(`color_a`);
+  } else {
+    document.querySelector(`#main-icon`).classList.add(`color_pp`);
+  }
+
+  let upcommingTempOne = Math.round(response.data.daily[0].temp.max);
+  if (upcommingTempOne >= 45) {
+    upcommingTempOne = document
+      .querySelector(`#circle-one`)
+      .classList.add(`color_a`);
+  } else if (upcommingTempOne >= 40) {
+    document.querySelector(`#circle-one`).classList.add(`color_b`);
+  } else if (upcommingTempOne >= 35) {
+    document.querySelector(`#circle-one`).classList.add(`color_c`);
+  } else if (upcommingTempOne >= 30) {
+    document.querySelector(`#circle-one`).classList.add(`color_d`);
+  } else if (upcommingTempOne >= 25) {
+    document.querySelector(`#circle-one`).classList.add(`color_e`);
+  } else if (upcommingTempOne >= 20) {
+    document.querySelector(`#circle-one`).classList.add(`color_f`);
+  } else if (upcommingTempOne >= 15) {
+    document.querySelector(`#circle-one`).classList.add(`color_g`);
+  } else if (upcommingTempOne >= 10) {
+    document.querySelector(`#circle-one`).classList.add(`color_h`);
+  } else if (upcommingTempOne >= 5) {
+    document.querySelector(`#circle-one`).classList.add(`color_i`);
+  } else if (upcommingTempOne >= 0) {
+    document.querySelector(`#circle-one`).classList.add(`color_j`);
+  } else if (upcommingTempOne >= -5) {
+    document.querySelector(`#circle-one`).classList.add(`color_k`);
+  } else if (upcommingTempOne >= -10) {
+    document.querySelector(`#circle-one`).classList.add(`color_l`);
+  } else if (upcommingTempOne >= -15) {
+    document.querySelector(`#circle-one`).classList.add(`color_m`);
+  } else if (upcommingTempOne >= -20) {
+    document.querySelector(`#circle-one`).classList.add(`color_n`);
+  } else if (upcommingTempOne >= -25) {
+    document.querySelector(`#circle-one`).classList.add(`color_o`);
+  } else {
+    document.querySelector(`#circle-one`).classList.add(`color_p`);
+  }
+
+  let upcommingTempTwo = Math.round(response.data.daily[1].temp.max);
+  if (upcommingTempTwo >= 45) {
+    upcommingTempTwo = document
+      .querySelector(`#circle-two`)
+      .classList.add(`color_a`);
+  } else if (upcommingTempTwo >= 40) {
+    document.querySelector(`#circle-two`).classList.add(`color_b`);
+  } else if (upcommingTempTwo >= 35) {
+    document.querySelector(`#circle-two`).classList.add(`color_c`);
+  } else if (upcommingTempTwo >= 30) {
+    document.querySelector(`#circle-two`).classList.add(`color_d`);
+  } else if (upcommingTempTwo >= 25) {
+    document.querySelector(`#circle-two`).classList.add(`color_e`);
+  } else if (upcommingTempTwo >= 20) {
+    document.querySelector(`#circle-two`).classList.add(`color_f`);
+  } else if (upcommingTempTwo >= 15) {
+    document.querySelector(`#circle-two`).classList.add(`color_g`);
+  } else if (upcommingTempTwo >= 10) {
+    document.querySelector(`#circle-two`).classList.add(`color_h`);
+  } else if (upcommingTempTwo >= 5) {
+    document.querySelector(`#circle-two`).classList.add(`color_i`);
+  } else if (upcommingTempTwo >= 0) {
+    document.querySelector(`#circle-two`).classList.add(`color_j`);
+  } else if (upcommingTempTwo >= -5) {
+    document.querySelector(`#circle-two`).classList.add(`color_k`);
+  } else if (upcommingTempTwo >= -10) {
+    document.querySelector(`#circle-two`).classList.add(`color_l`);
+  } else if (upcommingTempTwo >= -15) {
+    document.querySelector(`#circle-two`).classList.add(`color_m`);
+  } else if (upcommingTempTwo >= -20) {
+    document.querySelector(`#circle-two`).classList.add(`color_n`);
+  } else if (upcommingTempTwo >= -25) {
+    document.querySelector(`#circle-two`).classList.add(`color_o`);
+  } else {
+    document.querySelector(`#circle-two`).classList.add(`color_p`);
+  }
+
+  let upcommingTempThree = Math.round(response.data.daily[2].temp.max);
+  if (upcommingTempThree >= 45) {
+    upcommingTempThree = document
+      .querySelector(`#circle-three`)
+      .classList.add(`color_a`);
+  } else if (upcommingTempThree >= 40) {
+    document.querySelector(`#circle-three`).classList.add(`color_b`);
+  } else if (upcommingTempThree >= 35) {
+    document.querySelector(`#circle-three`).classList.add(`color_c`);
+  } else if (upcommingTempThree >= 30) {
+    document.querySelector(`#circle-three`).classList.add(`color_d`);
+  } else if (upcommingTempThree >= 25) {
+    document.querySelector(`#circle-three`).classList.add(`color_e`);
+  } else if (upcommingTempThree >= 20) {
+    document.querySelector(`#circle-three`).classList.add(`color_f`);
+  } else if (upcommingTempThree >= 15) {
+    document.querySelector(`#circle-three`).classList.add(`color_g`);
+  } else if (upcommingTempThree >= 10) {
+    document.querySelector(`#circle-three`).classList.add(`color_h`);
+  } else if (upcommingTempThree >= 5) {
+    document.querySelector(`#circle-three`).classList.add(`color_i`);
+  } else if (upcommingTempThree >= 0) {
+    document.querySelector(`#circle-three`).classList.add(`color_j`);
+  } else if (upcommingTempThree >= -5) {
+    document.querySelector(`#circle-three`).classList.add(`color_k`);
+  } else if (upcommingTempThree >= -10) {
+    document.querySelector(`#circle-three`).classList.add(`color_l`);
+  } else if (upcommingTempThree >= -15) {
+    document.querySelector(`#circle-three`).classList.add(`color_m`);
+  } else if (upcommingTempThree >= -20) {
+    document.querySelector(`#circle-three`).classList.add(`color_n`);
+  } else if (upcommingTempThree >= -25) {
+    document.querySelector(`#circle-three`).classList.add(`color_o`);
+  } else {
+    document.querySelector(`#circle-three`).classList.add(`color_p`);
+  }
+
+  let upcommingTempFour = Math.round(response.data.daily[3].temp.max);
+  if (upcommingTempFour >= 45) {
+    upcommingTempFour = document
+      .querySelector(`#circle-four`)
+      .classList.add(`color_a`);
+  } else if (upcommingTempFour >= 40) {
+    document.querySelector(`#circle-four`).classList.add(`color_b`);
+  } else if (upcommingTempFour >= 35) {
+    document.querySelector(`#circle-four`).classList.add(`color_c`);
+  } else if (upcommingTempFour >= 30) {
+    document.querySelector(`#circle-four`).classList.add(`color_d`);
+  } else if (upcommingTempFour >= 25) {
+    document.querySelector(`#circle-four`).classList.add(`color_e`);
+  } else if (upcommingTempFour >= 20) {
+    document.querySelector(`#circle-four`).classList.add(`color_f`);
+  } else if (upcommingTempFour >= 15) {
+    document.querySelector(`#circle-four`).classList.add(`color_g`);
+  } else if (upcommingTempFour >= 10) {
+    document.querySelector(`#circle-four`).classList.add(`color_h`);
+  } else if (upcommingTempFour >= 5) {
+    document.querySelector(`#circle-four`).classList.add(`color_i`);
+  } else if (upcommingTempFour >= 0) {
+    document.querySelector(`#circle-four`).classList.add(`color_j`);
+  } else if (upcommingTempFour >= -5) {
+    document.querySelector(`#circle-four`).classList.add(`color_k`);
+  } else if (upcommingTempFour >= -10) {
+    document.querySelector(`#circle-four`).classList.add(`color_l`);
+  } else if (upcommingTempFour >= -15) {
+    document.querySelector(`#circle-four`).classList.add(`color_m`);
+  } else if (upcommingTempFour >= -20) {
+    document.querySelector(`#circle-four`).classList.add(`color_n`);
+  } else if (upcommingTempFour >= -25) {
+    document.querySelector(`#circle-four`).classList.add(`color_o`);
+  } else {
+    document.querySelector(`#circle-four`).classList.add(`color_p`);
+  }
+
+  let upcommingTempFive = Math.round(response.data.daily[4].temp.max);
+  if (upcommingTempFive >= 45) {
+    upcommingTempFive = document
+      .querySelector(`#circle-five`)
+      .classList.add(`color_a`);
+  } else if (upcommingTempFive >= 40) {
+    document.querySelector(`#circle-five`).classList.add(`color_b`);
+  } else if (upcommingTempFive >= 35) {
+    document.querySelector(`#circle-five`).classList.add(`color_c`);
+  } else if (upcommingTempFive >= 30) {
+    document.querySelector(`#circle-five`).classList.add(`color_d`);
+  } else if (upcommingTempFive >= 25) {
+    document.querySelector(`#circle-five`).classList.add(`color_e`);
+  } else if (upcommingTempFive >= 20) {
+    document.querySelector(`#circle-five`).classList.add(`color_f`);
+  } else if (upcommingTempFive >= 15) {
+    document.querySelector(`#circle-five`).classList.add(`color_g`);
+  } else if (upcommingTempFive >= 10) {
+    document.querySelector(`#circle-five`).classList.add(`color_h`);
+  } else if (upcommingTempFive >= 5) {
+    document.querySelector(`#circle-five`).classList.add(`color_i`);
+  } else if (upcommingTempFive >= 0) {
+    document.querySelector(`#circle-five`).classList.add(`color_j`);
+  } else if (upcommingTempFive >= -5) {
+    document.querySelector(`#circle-five`).classList.add(`color_k`);
+  } else if (upcommingTempFive >= -10) {
+    document.querySelector(`#circle-five`).classList.add(`color_l`);
+  } else if (upcommingTempFive >= -15) {
+    document.querySelector(`#circle-five`).classList.add(`color_m`);
+  } else if (upcommingTempFive >= -20) {
+    document.querySelector(`#circle-five`).classList.add(`color_n`);
+  } else if (upcommingTempFive >= -25) {
+    document.querySelector(`#circle-five`).classList.add(`color_o`);
+  } else {
+    document.querySelector(`#circle-five`).classList.add(`color_p`);
+  }
+
+  let upcommingTempSix = Math.round(response.data.daily[5].temp.max);
+  if (upcommingTempSix >= 45) {
+    upcommingTempSix = document
+      .querySelector(`#circle-six`)
+      .classList.add(`color_a`);
+  } else if (upcommingTempSix >= 40) {
+    document.querySelector(`#circle-six`).classList.add(`color_b`);
+  } else if (upcommingTempSix >= 35) {
+    document.querySelector(`#circle-six`).classList.add(`color_c`);
+  } else if (upcommingTempSix >= 30) {
+    document.querySelector(`#circle-six`).classList.add(`color_d`);
+  } else if (upcommingTempSix >= 25) {
+    document.querySelector(`#circle-six`).classList.add(`color_e`);
+  } else if (upcommingTempSix >= 20) {
+    document.querySelector(`#circle-six`).classList.add(`color_f`);
+  } else if (upcommingTempSix >= 15) {
+    document.querySelector(`#circle-six`).classList.add(`color_g`);
+  } else if (upcommingTempSix >= 10) {
+    document.querySelector(`#circle-six`).classList.add(`color_h`);
+  } else if (upcommingTempSix >= 5) {
+    document.querySelector(`#circle-six`).classList.add(`color_i`);
+  } else if (upcommingTempSix >= 0) {
+    document.querySelector(`#circle-six`).classList.add(`color_j`);
+  } else if (upcommingTempSix >= -5) {
+    document.querySelector(`#circle-six`).classList.add(`color_k`);
+  } else if (upcommingTempSix >= -10) {
+    document.querySelector(`#circle-six`).classList.add(`color_l`);
+  } else if (upcommingTempSix >= -15) {
+    document.querySelector(`#circle-six`).classList.add(`color_m`);
+  } else if (upcommingTempSix >= -20) {
+    document.querySelector(`#circle-six`).classList.add(`color_n`);
+  } else if (upcommingTempSix >= -25) {
+    document.querySelector(`#circle-six`).classList.add(`color_o`);
+  } else {
+    document.querySelector(`#circle-six`).classList.add(`color_p`);
+  }
+
+  let upcommingTempSeven = Math.round(response.data.daily[6].temp.max);
+  if (upcommingTempSeven >= 45) {
+    upcommingTempSeven = document
+      .querySelector(`#circle-seven`)
+      .classList.add(`color_a`);
+  } else if (upcommingTempSeven >= 40) {
+    document.querySelector(`#circle-seven`).classList.add(`color_b`);
+  } else if (upcommingTempSeven >= 35) {
+    document.querySelector(`#circle-seven`).classList.add(`color_c`);
+  } else if (upcommingTempSeven >= 30) {
+    document.querySelector(`#circle-seven`).classList.add(`color_d`);
+  } else if (upcommingTempSeven >= 25) {
+    document.querySelector(`#circle-seven`).classList.add(`color_e`);
+  } else if (upcommingTempSeven >= 20) {
+    document.querySelector(`#circle-seven`).classList.add(`color_f`);
+  } else if (upcommingTempSeven >= 15) {
+    document.querySelector(`#circle-seven`).classList.add(`color_g`);
+  } else if (upcommingTempSeven >= 10) {
+    document.querySelector(`#circle-seven`).classList.add(`color_h`);
+  } else if (upcommingTempSeven >= 5) {
+    document.querySelector(`#circle-seven`).classList.add(`color_i`);
+  } else if (upcommingTempSeven >= 0) {
+    document.querySelector(`#circle-seven`).classList.add(`color_j`);
+  } else if (upcommingTempSeven >= -5) {
+    document.querySelector(`#circle-seven`).classList.add(`color_k`);
+  } else if (upcommingTempSeven >= -10) {
+    document.querySelector(`#circle-seven`).classList.add(`color_l`);
+  } else if (upcommingTempSeven >= -15) {
+    document.querySelector(`#circle-seven`).classList.add(`color_m`);
+  } else if (upcommingTempSeven >= -20) {
+    document.querySelector(`#circle-seven`).classList.add(`color_n`);
+  } else if (upcommingTempSeven >= -25) {
+    document.querySelector(`#circle-seven`).classList.add(`color_o`);
+  } else {
+    document.querySelector(`#circle-seven`).classList.add(`color_p`);
+  }
 }
 
 // Makes the api call on load & on search -> function show Temp
