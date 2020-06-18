@@ -1,7 +1,6 @@
 body {
-  padding-top: 25px;
+  padding-top: 30px;
   background-color: #fafafa;
-  border: 10px solid white;
 }
 
 .test-rapper {
@@ -32,7 +31,7 @@ body {
 
 ul {
   list-style: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #2e3131;
@@ -41,7 +40,7 @@ ul {
 
 .local h1 {
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 40px;
   text-transform: capitalize;
@@ -50,7 +49,7 @@ ul {
 
 .local h2 {
   text-align: center;
-  font-family: "Lora", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #2e3131;
 }
@@ -72,14 +71,14 @@ ul {
 .day_future {
   margin: 0;
   padding-bottom: 5px;
-  font-family: "Lora", serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #2e3131;
 }
 
 .temp_future {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding-top: 15px;
   color: #2e3131;
 }
@@ -109,7 +108,7 @@ ul {
 footer {
   padding-top: 35px;
   padding-left: 5px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 15px;
 }
@@ -146,4 +145,40 @@ footer a:hover {
 .temp_seperator {
   font-weight: 400;
   color: #ced2d4;
+}
+
+.widgetContainer {
+  width: auto;
+  height: 555px;
+  width: 500px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.centerme {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.firstWidgetCircle {
+  width: 250px;
+  height: 250px;
+  display: block;
+  border-radius: 50%;
+  background: #f9bb56;
+}
+
+.widgetText {
+  display: block;
+  width: auto;
+  height: 50px;
+  z-index: 10;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 30px;
 }

@@ -433,14 +433,14 @@ function search(city) {
     .then(showTemp);
 }
 
-// storing the value of the search -> function search
+//storing the value of the search -> function search
 function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector(`#city-search`).value;
   search(city);
 }
 
-// when searching for a city -> function city search
+// when searching for a city -> function searchCity
 document.querySelector(`#search`).addEventListener(`submit`, searchCity);
 
 // city on load -> function search

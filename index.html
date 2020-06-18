@@ -17,11 +17,7 @@
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lora&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="asset/favicon.png" />
@@ -36,12 +32,13 @@
             <p class="page_name">CircleCast</p>
           </div>
           <div class="col-10">
-            <form id="search">
+            <form id="first-search">
+              
               <div class="search_form">
                 <input
                   type="text"
                   class="search_field"
-                  id="city-search"
+                  id="first-city-search"
                   placeholder="Search for a city"
                   autocomplete="off"
                 />
@@ -56,124 +53,16 @@
         </div>
       </div>
 
-      <div class="test-rapper">
-        <div class="local">
-          <h1 id="city"></h1>
-          <h2 class="current">
-            <span id="date"></span>
-            <br />
-            <span class="capitalize" id="weather-description"></span>
-          </h2>
-        </div>
-
-        <div class="local_detail">
-          <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-              <span class="temp_digit" id="current-temp"></span>
-              <span class="unit">
-                <span class="strong">°C</span>
-              </span>
-              <div class="big_circle" id="main-circle"></div>
-            </div>
-            <div class="col-4">
-              <ul>
-                <li>
-                  Precipitation:&nbsp <span id="current-precipitation">5</span>%
-                </li>
-                <li>Humidity:&nbsp <span id="current-humidity"></span>%</li>
-                <li>Wind:&nbsp <span id="current-wind"></span>km/h</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="forcast">
-          <div class="row">
-            <div class="col">
-              <div class="temp_circle test_circle" id="circle-one"></div>
-              <p class="temp_future">
-                <strong
-                  ><span id="one-max"></span>°C /
-                  <span id="one-min"></span>°C</strong
-                >
-              </p>
-              <p class="day_future" id="today"></p>
-            </div>
-            <div class="col">
-              <div class="temp_circle test_circle" id="circle-two"></div>
-              <p class="temp_future">
-                <strong
-                  ><span id="two-max"></span>°C /
-                  <span id="two-min"></span>°C</strong
-                >
-              </p>
-              <p class="day_future" id="tomorrow"></p>
-            </div>
-            <div class="col">
-              <div class="temp_circle test_circle" id="circle-three"></div>
-              <p class="temp_future">
-                <strong
-                  ><span id="three-max"></span>°C /
-                  <span id="three-min"></span>°C</strong
-                >
-              </p>
-              <p class="day_future" id="day-three"></p>
-            </div>
-            <div class="col">
-              <div class="temp_circle test_circle" id="circle-four"></div>
-              <p class="temp_future">
-                <strong
-                  ><span id="four-max"></span>°C /
-                  <span id="four-min"></span>°C</strong
-                >
-              </p>
-              <p class="day_future" id="day-four"></p>
-            </div>
-            <div class="col">
-              <div class="temp_circle test_circle" id="circle-five"></div>
-              <p class="temp_future">
-                <strong
-                  ><span id="five-max"></span>°C /
-                  <span id="five-min"></span>°C</strong
-                >
-              </p>
-              <p class="day_future" id="day-five"></p>
-            </div>
-            <div class="col">
-              <div class="temp_circle test_circle" id="circle-six"></div>
-              <p class="temp_future">
-                <strong
-                  ><span id="six-max"></span>°C /
-                  <span id="six-min"></span>°C</strong
-                >
-              </p>
-              <p class="day_future" id="day-six"></p>
-            </div>
-            <div class="col">
-              <div class="temp_circle test_circle" id="circle-seven"></div>
-              <p class="temp_future">
-                <strong
-                  ><span id="seven-max"></span>°C /
-                  <span id="seven-min"></span>°C</strong
-                >
-              </p>
-              <p class="day_future" id="day-seven"></p>
-            </div>
-          </div>
-        </div>
+<div class="widgetContainer">
+  <div class="firstWidgetCircle centerme"></div>
+  <div class="widgetText centerme">
+    <p>
+      What's the weather like in...
+    </p>
+  </div>
+</div>
       </div>
     </div>
-    <footer>
-      This project was coded by
-      <a
-        href="https://www.linkedin.com/in/julia-knaeble-86309a162/"
-        target="_blank"
-        >Julia Knaeble</a
-      >
-      and is open sourced on
-      <a href="https://github.com/JuliaKnaeble" target="_blank">GitHub</a>
-    </footer>
-    <script src="src/script.js"></script>
+    <script src=""></script>
   </body>
 </html>
