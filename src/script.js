@@ -144,287 +144,351 @@ function showForcast(response) {
   );
 
   let currentTemp = Math.round(response.data.current.temp);
-  if (currentTemp >= 45) {
-    document.querySelector(`#main-circle`).style.backgroundColor = `#f66c61`;
+  if (currentTemp >= 44) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#801109`;
   } else if (currentTemp >= 40) {
-    document.querySelector(`#main-circle`).style.backgroundColor = `#f67d5f`;
-  } else if (currentTemp >= 35) {
-    document.querySelector(`#main-circle`).style.backgroundColor = `#f78a5e`;
-  } else if (currentTemp >= 30) {
-    document.querySelector(`#main-circle`).style.backgroundColor = `#f7955c`;
-  } else if (currentTemp >= 25) {
-    document.querySelector(`#main-circle`).style.backgroundColor = `#f8a35a`;
+    document.querySelector(`#main-circle`).style.backgroundColor = `#D64338`;
+  } else if (currentTemp >= 36) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#FF694B`;
+  } else if (currentTemp >= 32) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#FF8744`;
+  } else if (currentTemp >= 28) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#FF9F48`;
+  } else if (currentTemp >= 24) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#FFB15A`;
   } else if (currentTemp >= 20) {
-    document.querySelector(`#main-circle`).style.backgroundColor = `#f8af58`;
-  } else if (currentTemp >= 15) {
-    document.querySelector(`#main-circle`).style.backgroundColor = `#f9bb56`;
-  } else if (currentTemp >= 10) {
-    document.querySelector(`#main-circle`).style.backgroundColor = `#f8cc70`;
-  } else if (currentTemp >= 5) {
-    document.querySelector(`#main-circle`).style.backgroundColor = `#f3dda7`;
+    document.querySelector(`#main-circle`).style.backgroundColor = `#FFC06A`;
+  } else if (currentTemp >= 16) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#FFD07B`;
+  } else if (currentTemp >= 12) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#FFE18F`;
+  } else if (currentTemp >= 8) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#FBE8B6`;
+  } else if (currentTemp >= 4) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#FDF5DD`;
   } else if (currentTemp >= 0) {
-    document.querySelector(`#main-circle`).style.backgroundColor = `#e7f0f4`;
-  } else if (currentTemp >= -5) {
-    document.querySelector(`#main-circle`).style.backgroundColor = `#dbe9ff`;
-  } else if (currentTemp >= -10) {
-    document.querySelector(`main-circle`).style.backgroundColor = `#bacfff`;
-  } else if (currentTemp >= -15) {
-    document.querySelector(`main-circle`).style.backgroundColor = `#9bb6ff`;
+    document.querySelector(`#main-circle`).style.backgroundColor = `#ECF5FE`;
+  } else if (currentTemp >= -4) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#DCE7FE`;
+  } else if (currentTemp >= -8) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#B9CDFF`;
+  } else if (currentTemp >= -12) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#93B0FF`;
+  } else if (currentTemp >= -16) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#7398FF`;
   } else if (currentTemp >= -20) {
-    document.querySelector(`main-circle`).style.backgroundColor = `#889dff`;
-  } else if (currentTemp >= -25) {
-    document.querySelector(`main-circle`).style.backgroundColor = `#8281ff`;
+    document.querySelector(`#main-circle`).style.backgroundColor = `#5B73F5`;
+  } else if (currentTemp >= -24) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#4952D9`;
+  } else if (currentTemp >= -28) {
+    document.querySelector(`#main-circle`).style.backgroundColor = `#372FC3`;
   } else {
-    document.querySelector(`main-circle`).style.backgroundColor = `#7c60ff`;
+    document.querySelector(`#main-circle`).style.backgroundColor = `#2306AA`;
   }
 
   let upcommingTempOne = Math.round(response.data.daily[0].temp.max);
-  if (upcommingTempOne >= 45) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#f66c61`;
+  if (upcommingTempOne >= 44) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#801109`;
   } else if (upcommingTempOne >= 40) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#f67d5f`;
-  } else if (upcommingTempOne >= 35) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#f78a5e`;
-  } else if (upcommingTempOne >= 30) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#f7955c`;
-  } else if (upcommingTempOne >= 25) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#f8a35a`;
+    document.querySelector(`#circle-one`).style.backgroundColor = `#D64338`;
+  } else if (upcommingTempOne >= 36) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#FF694B`;
+  } else if (upcommingTempOne >= 32) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#FF8744`;
+  } else if (upcommingTempOne >= 28) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#FF9F48`;
+  } else if (upcommingTempOne >= 24) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#FFB15A`;
   } else if (upcommingTempOne >= 20) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#f8af58`;
-  } else if (upcommingTempOne >= 15) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#f9bb56`;
-  } else if (upcommingTempOne >= 10) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#f8cc70`;
-  } else if (upcommingTempOne >= 5) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#f3dda7`;
+    document.querySelector(`#circle-one`).style.backgroundColor = `#FFC06A`;
+  } else if (upcommingTempOne >= 16) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#FFD07B`;
+  } else if (upcommingTempOne >= 12) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#FFE18F`;
+  } else if (upcommingTempOne >= 8) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#FBE8B6`;
+  } else if (upcommingTempOne >= 4) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#FDF5DD`;
   } else if (upcommingTempOne >= 0) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#e7f0f4`;
-  } else if (upcommingTempOne >= -5) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#dbe9ff`;
-  } else if (upcommingTempOne >= -10) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#bacfff`;
-  } else if (upcommingTempOne >= -15) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#9bb6ff`;
+    document.querySelector(`#circle-one`).style.backgroundColor = `#ECF5FE`;
+  } else if (upcommingTempOne >= -4) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#DCE7FE`;
+  } else if (upcommingTempOne >= -8) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#B9CDFF`;
+  } else if (upcommingTempOne >= -12) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#93B0FF`;
+  } else if (upcommingTempOne >= -16) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#7398FF`;
   } else if (upcommingTempOne >= -20) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#889dff`;
-  } else if (upcommingTempOne >= -25) {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#8281ff`;
+    document.querySelector(`#circle-one`).style.backgroundColor = `#5B73F5`;
+  } else if (upcommingTempOne >= -24) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#4952D9`;
+  } else if (upcommingTempOne >= -28) {
+    document.querySelector(`#circle-one`).style.backgroundColor = `#372FC3`;
   } else {
-    document.querySelector(`#circle-one`).style.backgroundColor = `#7c60ff`;
+    document.querySelector(`#circle-one`).style.backgroundColor = `#2306AA`;
   }
 
   let upcommingTempTwo = Math.round(response.data.daily[1].temp.max);
-  if (upcommingTempTwo >= 45) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#f66c61`;
+  if (upcommingTempTwo >= 44) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#801109`;
   } else if (upcommingTempTwo >= 40) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#f67d5f`;
-  } else if (upcommingTempTwo >= 35) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#f78a5e`;
-  } else if (upcommingTempTwo >= 30) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#f7955c`;
-  } else if (upcommingTempTwo >= 25) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#f8a35a`;
+    document.querySelector(`#circle-tow`).style.backgroundColor = `#D64338`;
+  } else if (upcommingTempTwo >= 36) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#FF694B`;
+  } else if (upcommingTempTwo >= 32) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#FF8744`;
+  } else if (upcommingTempTwo >= 28) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#FF9F48`;
+  } else if (upcommingTempTwo >= 24) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#FFB15A`;
   } else if (upcommingTempTwo >= 20) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#f8af58`;
-  } else if (upcommingTempTwo >= 15) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#f9bb56`;
-  } else if (upcommingTempTwo >= 10) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#f8cc70`;
-  } else if (upcommingTempTwo >= 5) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#f3dda7`;
+    document.querySelector(`#circle-two`).style.backgroundColor = `#FFC06A`;
+  } else if (upcommingTempTwo >= 16) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#FFD07B`;
+  } else if (upcommingTempTwo >= 12) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#FFE18F`;
+  } else if (upcommingTempTwo >= 8) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#FBE8B6`;
+  } else if (upcommingTempTwo >= 4) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#FDF5DD`;
   } else if (upcommingTempTwo >= 0) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#e7f0f4`;
-  } else if (upcommingTempTwo >= -5) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#dbe9ff`;
-  } else if (upcommingTempTwo >= -10) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#bacfff`;
-  } else if (upcommingTempTwo >= -15) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#9bb6ff`;
+    document.querySelector(`#circle-two`).style.backgroundColor = `#ECF5FE`;
+  } else if (upcommingTempTwo >= -4) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#DCE7FE`;
+  } else if (upcommingTempTwo >= -8) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#B9CDFF`;
+  } else if (upcommingTempTwo >= -12) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#93B0FF`;
+  } else if (upcommingTempTwo >= -16) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#7398FF`;
   } else if (upcommingTempTwo >= -20) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#889dff`;
-  } else if (upcommingTempTwo >= -25) {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#8281ff`;
+    document.querySelector(`#circle-two`).style.backgroundColor = `#5B73F5`;
+  } else if (upcommingTempTwo >= -24) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#4952D9`;
+  } else if (upcommingTempTwo >= -28) {
+    document.querySelector(`#circle-two`).style.backgroundColor = `#372FC3`;
   } else {
-    document.querySelector(`#circle-two`).style.backgroundColor = `#7c60ff`;
+    document.querySelector(`#circle-two`).style.backgroundColor = `#2306AA`;
   }
 
   let upcommingTempThree = Math.round(response.data.daily[2].temp.max);
-  if (upcommingTempThree >= 45) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#f66c61`;
+  if (upcommingTempThree >= 44) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#801109`;
   } else if (upcommingTempThree >= 40) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#f67d5f`;
-  } else if (upcommingTempThree >= 35) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#f78a5e`;
-  } else if (upcommingTempThree >= 30) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#f7955c`;
-  } else if (upcommingTempThree >= 25) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#f8a35a`;
+    document.querySelector(`#circle-three`).style.backgroundColor = `#D64338`;
+  } else if (upcommingTempThree >= 36) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#FF694B`;
+  } else if (upcommingTempThree >= 32) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#FF8744`;
+  } else if (upcommingTempThree >= 28) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#FF9F48`;
+  } else if (upcommingTempThree >= 24) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#FFB15A`;
   } else if (upcommingTempThree >= 20) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#f8af58`;
-  } else if (upcommingTempThree >= 15) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#f9bb56`;
-  } else if (upcommingTempThree >= 10) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#f8cc70`;
-  } else if (upcommingTempThree >= 5) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#f3dda7`;
+    document.querySelector(`#circle-three`).style.backgroundColor = `#FFC06A`;
+  } else if (upcommingTempThree >= 16) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#FFD07B`;
+  } else if (upcommingTempThree >= 12) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#FFE18F`;
+  } else if (upcommingTempThree >= 8) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#FBE8B6`;
+  } else if (upcommingTempThree >= 4) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#FDF5DD`;
   } else if (upcommingTempThree >= 0) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#e7f0f4`;
-  } else if (upcommingTempThree >= -5) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#dbe9ff`;
-  } else if (upcommingTempThree >= -10) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#bacfff`;
-  } else if (upcommingTempThree >= -15) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#9bb6ff`;
+    document.querySelector(`#circle-three`).style.backgroundColor = `#ECF5FE`;
+  } else if (upcommingTempThree >= -4) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#DCE7FE`;
+  } else if (upcommingTempThree >= -8) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#B9CDFF`;
+  } else if (upcommingTempThree >= -12) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#93B0FF`;
+  } else if (upcommingTempThree >= -16) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#7398FF`;
   } else if (upcommingTempThree >= -20) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#889dff`;
-  } else if (upcommingTempThree >= -25) {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#8281ff`;
+    document.querySelector(`#circle-three`).style.backgroundColor = `#5B73F5`;
+  } else if (upcommingTempThree >= -24) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#4952D9`;
+  } else if (upcommingTempThree >= -28) {
+    document.querySelector(`#circle-three`).style.backgroundColor = `#372FC3`;
   } else {
-    document.querySelector(`#circle-three`).style.backgroundColor = `#7c60ff`;
+    document.querySelector(`#circle-three`).style.backgroundColor = `#2306AA`;
   }
 
   let upcommingTempFour = Math.round(response.data.daily[3].temp.max);
-  if (upcommingTempFour >= 45) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#f66c61`;
+  if (upcommingTempFour >= 44) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#801109`;
   } else if (upcommingTempFour >= 40) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#f67d5f`;
-  } else if (upcommingTempFour >= 35) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#f78a5e`;
-  } else if (upcommingTempFour >= 30) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#f7955c`;
-  } else if (upcommingTempFour >= 25) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#f8a35a`;
+    document.querySelector(`#circle-four`).style.backgroundColor = `#D64338`;
+  } else if (upcommingTempFour >= 36) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#FF694B`;
+  } else if (upcommingTempFour >= 32) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#FF8744`;
+  } else if (upcommingTempFour >= 28) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#FF9F48`;
+  } else if (upcommingTempFour >= 24) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#FFB15A`;
   } else if (upcommingTempFour >= 20) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#f8af58`;
-  } else if (upcommingTempFour >= 15) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#f9bb56`;
-  } else if (upcommingTempFour >= 10) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#f8cc70`;
-  } else if (upcommingTempFour >= 5) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#f3dda7`;
+    document.querySelector(`#circle-four`).style.backgroundColor = `#FFC06A`;
+  } else if (upcommingTempFour >= 16) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#FFD07B`;
+  } else if (upcommingTempFour >= 12) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#FFE18F`;
+  } else if (upcommingTempFour >= 8) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#FBE8B6`;
+  } else if (upcommingTempFour >= 4) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#FDF5DD`;
   } else if (upcommingTempFour >= 0) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#e7f0f4`;
-  } else if (upcommingTempFour >= -5) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#dbe9ff`;
-  } else if (upcommingTempFour >= -10) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#bacfff`;
-  } else if (upcommingTempFour >= -15) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#9bb6ff`;
+    document.querySelector(`#circle-four`).style.backgroundColor = `#ECF5FE`;
+  } else if (upcommingTempFour >= -4) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#DCE7FE`;
+  } else if (upcommingTempFour >= -8) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#B9CDFF`;
+  } else if (upcommingTempFour >= -12) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#93B0FF`;
+  } else if (upcommingTempFour >= -16) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#7398FF`;
   } else if (upcommingTempFour >= -20) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#889dff`;
-  } else if (upcommingTempFour >= -25) {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#8281ff`;
+    document.querySelector(`#circle-four`).style.backgroundColor = `#5B73F5`;
+  } else if (upcommingTempFour >= -24) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#4952D9`;
+  } else if (upcommingTempFour >= -28) {
+    document.querySelector(`#circle-four`).style.backgroundColor = `#372FC3`;
   } else {
-    document.querySelector(`#circle-four`).style.backgroundColor = `#7c60ff`;
+    document.querySelector(`#circle-four`).style.backgroundColor = `#2306AA`;
   }
 
   let upcommingTempFive = Math.round(response.data.daily[4].temp.max);
-  if (upcommingTempFive >= 45) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#f66c61`;
+  if (upcommingTempFive >= 44) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#801109`;
   } else if (upcommingTempFive >= 40) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#f67d5f`;
-  } else if (upcommingTempFive >= 35) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#f78a5e`;
-  } else if (upcommingTempFive >= 30) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#f7955c`;
-  } else if (upcommingTempFive >= 25) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#f8a35a`;
+    document.querySelector(`#circle-five`).style.backgroundColor = `#D64338`;
+  } else if (upcommingTempFive >= 36) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#FF694B`;
+  } else if (upcommingTempFive >= 32) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#FF8744`;
+  } else if (upcommingTempFive >= 28) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#FF9F48`;
+  } else if (upcommingTempFive >= 24) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#FFB15A`;
   } else if (upcommingTempFive >= 20) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#f8af58`;
-  } else if (upcommingTempFive >= 15) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#f9bb56`;
-  } else if (upcommingTempFive >= 10) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#f8cc70`;
-  } else if (upcommingTempFive >= 5) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#f3dda7`;
+    document.querySelector(`#circle-five`).style.backgroundColor = `#FFC06A`;
+  } else if (upcommingTempFive >= 16) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#FFD07B`;
+  } else if (upcommingTempFive >= 12) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#FFE18F`;
+  } else if (upcommingTempFive >= 8) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#FBE8B6`;
+  } else if (upcommingTempFive >= 4) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#FDF5DD`;
   } else if (upcommingTempFive >= 0) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#e7f0f4`;
-  } else if (upcommingTempFive >= -5) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#dbe9ff`;
-  } else if (upcommingTempFive >= -10) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#bacfff`;
-  } else if (upcommingTempFive >= -15) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#9bb6ff`;
+    document.querySelector(`#circle-five`).style.backgroundColor = `#ECF5FE`;
+  } else if (upcommingTempFive >= -4) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#DCE7FE`;
+  } else if (upcommingTempFive >= -8) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#B9CDFF`;
+  } else if (upcommingTempFive >= -12) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#93B0FF`;
+  } else if (upcommingTempFive >= -16) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#7398FF`;
   } else if (upcommingTempFive >= -20) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#889dff`;
-  } else if (upcommingTempFive >= -25) {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#8281ff`;
+    document.querySelector(`#circle-five`).style.backgroundColor = `#5B73F5`;
+  } else if (upcommingTempFive >= -24) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#4952D9`;
+  } else if (upcommingTempFive >= -28) {
+    document.querySelector(`#circle-five`).style.backgroundColor = `#372FC3`;
   } else {
-    document.querySelector(`#circle-five`).style.backgroundColor = `#7c60ff`;
+    document.querySelector(`#circle-five`).style.backgroundColor = `#2306AA`;
   }
 
   let upcommingTempSix = Math.round(response.data.daily[5].temp.max);
-  if (upcommingTempSix >= 45) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#f66c61`;
+  if (upcommingTempSix >= 44) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#801109`;
   } else if (upcommingTempSix >= 40) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#f67d5f`;
-  } else if (upcommingTempSix >= 35) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#f78a5e`;
-  } else if (upcommingTempSix >= 30) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#f7955c`;
-  } else if (upcommingTempSix >= 25) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#f8a35a`;
+    document.querySelector(`#circle-six`).style.backgroundColor = `#D64338`;
+  } else if (upcommingTempSix >= 36) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#FF694B`;
+  } else if (upcommingTempSix >= 32) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#FF8744`;
+  } else if (upcommingTempSix >= 28) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#FF9F48`;
+  } else if (upcommingTempSix >= 24) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#FFB15A`;
   } else if (upcommingTempSix >= 20) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#f8af58`;
-  } else if (upcommingTempSix >= 15) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#f9bb56`;
-  } else if (upcommingTempSix >= 10) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#f8cc70`;
-  } else if (upcommingTempSix >= 5) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#f3dda7`;
+    document.querySelector(`#circle-six`).style.backgroundColor = `#FFC06A`;
+  } else if (upcommingTempSix >= 16) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#FFD07B`;
+  } else if (upcommingTempSix >= 12) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#FFE18F`;
+  } else if (upcommingTempSix >= 8) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#FBE8B6`;
+  } else if (upcommingTempSix >= 4) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#FDF5DD`;
   } else if (upcommingTempSix >= 0) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#e7f0f4`;
-  } else if (upcommingTempSix >= -5) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#dbe9ff`;
-  } else if (upcommingTempSix >= -10) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#bacfff`;
-  } else if (upcommingTempSix >= -15) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#9bb6ff`;
+    document.querySelector(`#circle-six`).style.backgroundColor = `#ECF5FE`;
+  } else if (upcommingTempSix >= -4) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#DCE7FE`;
+  } else if (upcommingTempSix >= -8) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#B9CDFF`;
+  } else if (upcommingTempSix >= -12) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#93B0FF`;
+  } else if (upcommingTempSix >= -16) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#7398FF`;
   } else if (upcommingTempSix >= -20) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#889dff`;
-  } else if (upcommingTempSix >= -25) {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#8281ff`;
+    document.querySelector(`#circle-six`).style.backgroundColor = `#5B73F5`;
+  } else if (upcommingTempSix >= -24) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#4952D9`;
+  } else if (upcommingTempSix >= -28) {
+    document.querySelector(`#circle-six`).style.backgroundColor = `#372FC3`;
   } else {
-    document.querySelector(`#circle-six`).style.backgroundColor = `#7c60ff`;
+    document.querySelector(`#circle-six`).style.backgroundColor = `#2306AA`;
   }
 
   let upcommingTempSeven = Math.round(response.data.daily[6].temp.max);
-  if (upcommingTempSeven >= 45) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#f66c61`;
+  if (upcommingTempSeven >= 44) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#801109`;
   } else if (upcommingTempSeven >= 40) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#f67d5f`;
-  } else if (upcommingTempSeven >= 35) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#f78a5e`;
-  } else if (upcommingTempSeven >= 30) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#f7955c`;
-  } else if (upcommingTempSeven >= 25) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#f8a35a`;
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#D64338`;
+  } else if (upcommingTempSeven >= 36) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#FF694B`;
+  } else if (upcommingTempSeven >= 32) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#FF8744`;
+  } else if (upcommingTempSeven >= 28) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#FF9F48`;
+  } else if (upcommingTempSeven >= 24) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#FFB15A`;
   } else if (upcommingTempSeven >= 20) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#f8af58`;
-  } else if (upcommingTempSeven >= 15) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#f9bb56`;
-  } else if (upcommingTempSeven >= 10) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#f8cc70`;
-  } else if (upcommingTempSeven >= 5) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#f3dda7`;
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#FFC06A`;
+  } else if (upcommingTempSeven >= 16) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#FFD07B`;
+  } else if (upcommingTempSeven >= 12) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#FFE18F`;
+  } else if (upcommingTempSeven >= 8) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#FBE8B6`;
+  } else if (upcommingTempSeven >= 4) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#FDF5DD`;
   } else if (upcommingTempSeven >= 0) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#e7f0f4`;
-  } else if (upcommingTempSeven >= -5) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#dbe9ff`;
-  } else if (upcommingTempSeven >= -10) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#bacfff`;
-  } else if (upcommingTempSeven >= -15) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#9bb6ff`;
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#ECF5FE`;
+  } else if (upcommingTempSeven >= -4) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#DCE7FE`;
+  } else if (upcommingTempSeven >= -8) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#B9CDFF`;
+  } else if (upcommingTempSeven >= -12) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#93B0FF`;
+  } else if (upcommingTempSeven >= -16) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#7398FF`;
   } else if (upcommingTempSeven >= -20) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#889dff`;
-  } else if (upcommingTempSeven >= -25) {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#8281ff`;
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#5B73F5`;
+  } else if (upcommingTempSeven >= -24) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#4952D9`;
+  } else if (upcommingTempSeven >= -28) {
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#372FC3`;
   } else {
-    document.querySelector(`#circle-seven`).style.backgroundColor = `#7c60ff`;
+    document.querySelector(`#circle-seven`).style.backgroundColor = `#2306AA`;
   }
 }
 
-// Makes the api call on load & on search -> function show Temp
+// Makes the api call on load & on search mainPage-> function show Temp
 function search(city) {
   let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
   let openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather`;
@@ -433,15 +497,43 @@ function search(city) {
     .then(showTemp);
 }
 
-//storing the value of the search -> function search
+// getItem stored city value from index.html
+//function searchStoredCity() {
+//let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
+//let openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather`;
+//axios
+// .get(
+//   `${openWeatherUrl}?q=${localStorage.city}&appid=${apiKeyWeather}&units=metric`
+//  )
+//  .then(showTemp);
+//}
+
+//storing the value of the search on mainPage-> function search
 function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector(`#city-search`).value;
   search(city);
 }
 
-// when searching for a city -> function searchCity
-document.querySelector(`#search`).addEventListener(`submit`, searchCity);
+// when searching for a city on mainPage-> function searchCity
+let mainSearch = document.querySelector(`#search`);
+if (mainSearch) {
+  mainSearch.addEventListener(`submit`, searchCity);
+}
 
 // city on load -> function search
-search(`Berlin`);
+search(localStorage.city);
+
+//value for first entry on welcoming page -> function searchStoredCity
+function firstSearchCity(event) {
+  event.preventDefault();
+  let firstCityValue = document.querySelector(`#first-city-search`).value;
+  localStorage.setItem("city", firstCityValue);
+  window.location.href = "mainPage.html";
+}
+
+// when searching for a city on welcomingPage-> function searchCity
+let initalSearch = document.querySelector(`#first-search`);
+if (initalSearch) {
+  initalSearch.addEventListener(`submit`, firstSearchCity);
+}
