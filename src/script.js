@@ -73,13 +73,13 @@ function showTime(response) {
     `Fri`,
     `Sat`,
   ];
-  let future = futureDays[response.data.day_of_week];
-  let futurePlusOne = futureDays[response.data.day_of_week + 1];
-  let futurePlusTwo = futureDays[response.data.day_of_week + 2];
-  let futurePlusThree = futureDays[response.data.day_of_week + 3];
-  let futurePlusFour = futureDays[response.data.day_of_week + 4];
-  let futurePlusFive = futureDays[response.data.day_of_week + 5];
-  let futurePlusSix = futureDays[response.data.day_of_week + 6];
+  let future = futureDays[response.data.day_of_week + 1];
+  let futurePlusOne = futureDays[response.data.day_of_week + 2];
+  let futurePlusTwo = futureDays[response.data.day_of_week + 3];
+  let futurePlusThree = futureDays[response.data.day_of_week + 4];
+  let futurePlusFour = futureDays[response.data.day_of_week + 5];
+  let futurePlusFive = futureDays[response.data.day_of_week + 6];
+  let futurePlusSix = futureDays[response.data.day_of_week + 7];
   document.querySelector(`#today`).innerHTML = `${future}`;
   document.querySelector(`#tomorrow`).innerHTML = `${futurePlusOne}`;
   document.querySelector(`#day-three`).innerHTML = `${futurePlusTwo}`;
@@ -497,17 +497,6 @@ function search(city) {
     .then(showTemp);
 }
 
-// getItem stored city value from index.html
-//function searchStoredCity() {
-//let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
-//let openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather`;
-//axios
-// .get(
-//   `${openWeatherUrl}?q=${localStorage.city}&appid=${apiKeyWeather}&units=metric`
-//  )
-//  .then(showTemp);
-//}
-
 //storing the value of the search on mainPage-> function search
 function searchCity(event) {
   event.preventDefault();
@@ -521,7 +510,7 @@ if (mainSearch) {
   mainSearch.addEventListener(`submit`, searchCity);
 }
 
-// city on load -> function search
+// city from local storrage -> function search
 search(localStorage.city);
 
 //value for first entry on welcoming page -> function searchStoredCity

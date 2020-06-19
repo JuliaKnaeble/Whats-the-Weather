@@ -1,6 +1,6 @@
 body {
-  padding-top: 30px;
-  background-color: #fafafa;
+  padding-top: 34px;
+  background-color: #fcfeff;
 }
 
 .test-rapper {
@@ -86,15 +86,23 @@ ul {
 .search_form input {
   display: block;
   margin: 0 auto;
-  width: 65%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  width: 88%;
+  height: 52px;
   border-radius: 50px;
   padding-left: 25px;
-  border: 1px solid #ced2d4;
-  background-color: #fafafa;
+  border: 0.8px solid #aec2d2;
+  background-color: #fcfeff;
   text-align: left;
   outline: none;
+}
+
+::placeholder {
+  color: #94aec2;
+  font-size: 20px;
+  letter-spacing: -0.1px;
+  text-align: left;
+  line-height: 27.76px;
+  font-weight: 400;
 }
 
 .strong {
@@ -131,15 +139,19 @@ footer a:hover {
 
 .page_name {
   vertical-align: -webkit-baseline-middle;
-  font-weight: 900;
-  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  color: #465866;
 }
 
 .temp_conversion {
   vertical-align: -webkit-baseline-middle;
-  font-weight: 900;
-  font-size: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
   letter-spacing: 15px;
+  color: #465866;
 }
 
 .temp_seperator {
@@ -149,8 +161,8 @@ footer a:hover {
 
 .widgetContainer {
   width: auto;
-  height: 555px;
-  width: 500px;
+  height: 530px;
+  width: 760px;
   position: relative;
   margin: 0 auto;
 }
@@ -165,20 +177,23 @@ footer a:hover {
 }
 
 .firstWidgetCircle {
-  width: 250px;
-  height: 250px;
+  width: 294px;
+  height: 294px;
   display: block;
   border-radius: 50%;
-  background: #f9bb56;
+  background: #ffe18f;
 }
 
 .widgetText {
   display: block;
   width: auto;
-  height: 50px;
+  height: 62px;
   z-index: 10;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 30px;
+  color: #465866;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 62px;
+  letter-spacing: -0.11px;
 }
