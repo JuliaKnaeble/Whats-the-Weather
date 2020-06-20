@@ -511,13 +511,13 @@ if (mainSearch) {
 }
 
 // city from local storrage -> function search
-search(localStorage.city);
+search(sessionStorage.city);
 
 //value for first entry on welcoming page -> function searchStoredCity
 function firstSearchCity(event) {
   event.preventDefault();
   let firstCityValue = document.querySelector(`#first-city-search`).value;
-  localStorage.setItem("city", firstCityValue);
+  sessionStorage.setItem("city", firstCityValue);
   window.location.href = "mainPage.html";
 }
 
