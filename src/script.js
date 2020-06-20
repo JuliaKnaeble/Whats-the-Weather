@@ -187,6 +187,7 @@ function showForcast(response) {
   }
 
   let upcommingTempOne = Math.round(response.data.daily[0].temp.max);
+  console.log(upcommingTempOne);
   if (upcommingTempOne >= 44) {
     document.querySelector(`#circle-one`).style.backgroundColor = `#801109`;
   } else if (upcommingTempOne >= 40) {
@@ -230,10 +231,11 @@ function showForcast(response) {
   }
 
   let upcommingTempTwo = Math.round(response.data.daily[1].temp.max);
+  console.log(upcommingTempTwo);
   if (upcommingTempTwo >= 44) {
     document.querySelector(`#circle-two`).style.backgroundColor = `#801109`;
   } else if (upcommingTempTwo >= 40) {
-    document.querySelector(`#circle-tow`).style.backgroundColor = `#D64338`;
+    document.querySelector(`#circle-two`).style.backgroundColor = `#D64338`;
   } else if (upcommingTempTwo >= 36) {
     document.querySelector(`#circle-two`).style.backgroundColor = `#FF694B`;
   } else if (upcommingTempTwo >= 32) {
