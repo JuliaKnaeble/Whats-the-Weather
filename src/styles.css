@@ -3,6 +3,10 @@ body {
   background-color: #fcfeff;
 }
 
+.container {
+  margin-top: 75px;
+}
+
 .test-rapper {
   width: 90%;
   display: block;
@@ -103,6 +107,18 @@ ul {
   text-align: left;
   line-height: 27.76px;
   font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.1px;
+  text-align: left;
+  line-height: 27.76px;
+  font-weight: 500;
+  color: #465866;
 }
 
 .strong {
@@ -111,25 +127,6 @@ ul {
 
 .capitalize {
   text-transform: capitalize;
-}
-
-footer {
-  padding-top: 35px;
-  padding-left: 5px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-}
-
-footer a {
-  font-weight: 600;
-  color: rgb(23, 141, 141);
-}
-
-footer a:hover {
-  font-weight: 600;
-  color: rgb(23, 141, 141);
-  text-decoration: none;
 }
 
 .temp_circle {
@@ -161,8 +158,8 @@ footer a:hover {
 
 .widgetContainer {
   width: auto;
-  height: 530px;
   width: 760px;
+  top: 350px;
   position: relative;
   margin: 0 auto;
 }
@@ -196,4 +193,82 @@ footer a:hover {
   font-size: 52px;
   line-height: 62px;
   letter-spacing: -0.11px;
+}
+
+.searchContainer {
+  position: relative;
+  width: auto;
+  margin: 0 auto;
+}
+
+.centerThis {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 98%;
+}
+
+.searchForm {
+  display: block;
+  text-align: center;
+  top: 14px;
+}
+
+.searchForm input {
+  width: 55%;
+  max-width: 814px;
+  height: 52px;
+  border-radius: 50px;
+  padding-left: 25px;
+  border: 0.8px solid #aec2d2;
+  background-color: #fcfeff;
+  text-align: left;
+  outline: none;
+}
+
+.pageName {
+  display: block;
+  text-align: left;
+  left: 25px;
+  top: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  color: #465866;
+}
+
+.fontWidgit {
+  display: block;
+  text-align: center;
+  top: 18px;
+  color: #94aec2;
+}
+
+.conversion {
+  display: block;
+  text-align: right;
+  top: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #fcfeff;
+  letter-spacing: 15px;
+  top: 15px;
+}
+
+.convertCelcius {
+  background-color: #465866;
+  border-radius: 50%;
+  padding-left: 12px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.convertFahrenheit {
+  background-color: #465866;
+  border-radius: 50%;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }

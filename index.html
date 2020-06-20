@@ -25,43 +25,31 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="header">
-        <div class="row">
-          <div class="col-1">
-            <p class="page_name"><strong>Circle</strong>Cast</p>
-          </div>
-          <div class="col-10">
+      <div>
+        <div class="searchContainer">
+          <div class="pageName centerThis"><strong>Circle</strong>Cast</div>
+          <div class="searchForm centerThis">
             <form id="first-search">
-              <div class="search_form">
-                <input
-                  type="text"
-                  class="search_field"
-                  id="first-city-search"
-                  placeholder="Search for a city"
-                  autocomplete="off"
-                />
-              </div>
+              <i class="fas fa-search centerThis fontWidgit"></i>
+              <input type="text" class="search_field" id="first-city-search" placeholder="Search for a city"
+                autocomplete="off" spellcheck="false" />
             </form>
           </div>
-          <div class="col-1">
-            <p class="temp_conversion">
-              <span>C</span><span class="temp_seperator">|</span><span>F</span>
+          <div class="conversion centerThis">
+            <span class="convertCelcius">C</span>
+            <span class="convertFahrenheit">F</span>
+          </div>
+        </div>
+      
+        <div class="widgetContainer">
+          <div class="firstWidgetCircle centerme"></div>
+          <div class="widgetText centerme">
+            <p>
+              What's the weather like in...
             </p>
           </div>
         </div>
-      </div>
-
-<div class="widgetContainer">
-  <div class="firstWidgetCircle centerme"></div>
-  <div class="widgetText centerme">
-    <p>
-      What's the weather like in...
-    </p>
-  </div>
-</div>
-      </div>
-    </div>
-    <script src="src/script.js"></script>
+      
+        <script src="src/script.js"></script>
   </body>
 </html>
