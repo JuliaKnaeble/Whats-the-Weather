@@ -25,14 +25,13 @@
   </head>
 
   <body>
-    <div class="searchContainer">
-      <div class="pageName centerThis"><strong>Circle</strong>Cast</div>
-      <div class="searchForm centerThis">
+    <div class="header">
+      <div class="pageName"><strong>Circle</strong>Cast</div>
+      <div class="searchForm">
         <form id="first-search">
-          <i class="fas fa-search centerThis fontWidgit"></i>
+          <i class="fas fa-search fontWidgit"></i>
           <input
             type="text"
-            class="search_field"
             id="first-city-search"
             placeholder="Search for a city"
             autocomplete="off"
@@ -40,116 +39,109 @@
           />
         </form>
       </div>
-      <div class="conversion centerThis">
+      <div class="conversion">
         <span class="convertCelcius">C</span>
         <span class="convertFahrenheit">F</span>
       </div>
     </div>
 
-    <div class="container">
-      <div class="test-rapper">
-        <div class="local">
-          <h1 id="city"></h1>
-          <h2 class="current">
-            <span id="date"></span>
-            <br />
-            <span class="capitalize" id="weather-description"></span>
-          </h2>
-        </div>
+    <div class="mainInfo_group"></div>
+    <div class="locall" id="city">Placeholder City</div>
+    <div class="currentt" id="date">Saturday 09.35</div>
+    <div class="capitalize description" id="weather-description">
+      Very Cloudy
+    </div>
 
-        <div class="local_detail">
-          <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-              <span class="temp_digit" id="current-temp"></span>
-              <span class="unit">
-                <span class="strong">°C</span>
-              </span>
+          <body>
+            <div class="pageCenter">
+              <div>
+                <span class="temp_digit" id="current-temp"></span>
+                <span class="unit">
+                  <span>°C</span>
+                </span>
+              </div>
+          
               <div class="big_circle" id="main-circle"></div>
+          
+              <div>
+                <ul class="humid_wind">
+                  <li>Humidity:&nbsp <span id="current-humidity"></span>%</li>
+                  <li>Wind:&nbsp <span id="current-wind"></span>km/h</li>
+                </ul>
+              </div>
             </div>
-            <div class="col-4">
-              <ul>
-                <li>
-                  Precipitation:&nbsp <span id="current-precipitation">5</span>%
-                </li>
-                <li>Humidity:&nbsp <span id="current-humidity"></span>%</li>
-                <li>Wind:&nbsp <span id="current-wind"></span>km/h</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
+<div class="container">
         <div class="forcast">
           <div class="row">
             <div class="col">
               <div class="temp_circle test_circle" id="circle-one"></div>
+              <p class="day_future" id="today"></p>
               <p class="temp_future">
                 <strong
                   ><span id="one-max"></span>°C /
-                  <span id="one-min"></span>°C</strong
-                >
+                  <span id="one-min"></span>°C</strong>
               </p>
-              <p class="day_future" id="today"></p>
+              
             </div>
             <div class="col">
               <div class="temp_circle test_circle" id="circle-two"></div>
+              <p class="day_future" id="tomorrow"></p>
               <p class="temp_future">
                 <strong
                   ><span id="two-max"></span>°C /
-                  <span id="two-min"></span>°C</strong
-                >
+                  <span id="two-min"></span>°C</strong>
               </p>
-              <p class="day_future" id="tomorrow"></p>
+              
             </div>
             <div class="col">
               <div class="temp_circle test_circle" id="circle-three"></div>
+              <p class="day_future" id="day-three"></p>
               <p class="temp_future">
                 <strong
                   ><span id="three-max"></span>°C /
-                  <span id="three-min"></span>°C</strong
-                >
+                  <span id="three-min"></span>°C</strong>
               </p>
-              <p class="day_future" id="day-three"></p>
+              
             </div>
             <div class="col">
               <div class="temp_circle test_circle" id="circle-four"></div>
+              <p class="day_future" id="day-four"></p>
               <p class="temp_future">
                 <strong
                   ><span id="four-max"></span>°C /
-                  <span id="four-min"></span>°C</strong
-                >
+                  <span id="four-min"></span>°C</strong>
               </p>
-              <p class="day_future" id="day-four"></p>
+              
             </div>
             <div class="col">
               <div class="temp_circle test_circle" id="circle-five"></div>
+              <p class="day_future" id="day-five"></p>
               <p class="temp_future">
                 <strong
                   ><span id="five-max"></span>°C /
-                  <span id="five-min"></span>°C</strong
-                >
+                  <span id="five-min"></span>°C</strong>
               </p>
-              <p class="day_future" id="day-five"></p>
+              
             </div>
             <div class="col">
               <div class="temp_circle test_circle" id="circle-six"></div>
+              <p class="day_future" id="day-six"></p>
               <p class="temp_future">
                 <strong
                   ><span id="six-max"></span>°C /
-                  <span id="six-min"></span>°C</strong
-                >
+                  <span id="six-min"></span>°C</strong>
               </p>
-              <p class="day_future" id="day-six"></p>
+              
             </div>
             <div class="col">
               <div class="temp_circle test_circle" id="circle-seven"></div>
+              <p class="day_future" id="day-seven"></p>
               <p class="temp_future">
                 <strong
                   ><span id="seven-max"></span>°C /
-                  <span id="seven-min"></span>°C</strong
-                >
+                  <span id="seven-min"></span>°C</strong>
               </p>
-              <p class="day_future" id="day-seven"></p>
+              
             </div>
           </div>
         </div>

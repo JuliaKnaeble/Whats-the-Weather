@@ -1,10 +1,9 @@
 body {
-  padding-top: 34px;
   background-color: #fcfeff;
 }
 
 .container {
-  margin-top: 75px;
+  margin-top: 15px;
 }
 
 .test-rapper {
@@ -13,24 +12,9 @@ body {
   margin: 0 auto;
 }
 
-.big_circle {
-  height: 160px;
-  width: 160px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-}
-
 .local_detail {
   margin-top: 20px;
   margin-bottom: 50px;
-}
-
-.test_circle {
-  height: 80px;
-  width: 50px;
-  display: block;
-  margin: 0 auto;
 }
 
 ul {
@@ -45,17 +29,54 @@ ul {
 .local h1 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 40px;
+  font-weight: 700;
+  font-size: 52px;
+  letter-spacing: -0.11px;
   text-transform: capitalize;
-  color: #2e3131;
+  color: #465866;
 }
 
 .local h2 {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  color: #2e3131;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.11px;
+  color: #465866;
+}
+
+.pageCenter {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp_digit,
+.unit {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  letter-spacing: -0.11px;
+  color: #465866;
+}
+
+.humid_wind {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.11px;
+  color: #465866;
+}
+
+.big_circle {
+  height: 200px;
+  width: 200px;
+  margin-left: 59px;
+  margin-right: 10px;
+  border-radius: 50%;
 }
 
 .local {
@@ -74,50 +95,21 @@ ul {
 
 .day_future {
   margin: 0;
-  padding-bottom: 5px;
+  padding-top: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #2e3131;
+  font-size: 20px;
+  letter-spacing: -0.11px;
+  color: #465866;
 }
 
 .temp_future {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  padding-top: 15px;
-  color: #2e3131;
-}
-
-.search_form input {
-  display: block;
-  margin: 0 auto;
-  width: 88%;
-  height: 52px;
-  border-radius: 50px;
-  padding-left: 25px;
-  border: 0.8px solid #aec2d2;
-  background-color: #fcfeff;
-  text-align: left;
-  outline: none;
-}
-
-::placeholder {
-  color: #94aec2;
   font-size: 20px;
-  letter-spacing: -0.1px;
-  text-align: left;
-  line-height: 27.76px;
-  font-weight: 400;
-  font-family: "Montserrat", sans-serif;
-}
-
-input,
-textarea {
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  letter-spacing: -0.1px;
-  text-align: left;
-  line-height: 27.76px;
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: -0.11px;
+  padding-top: 10px;
   color: #465866;
 }
 
@@ -130,30 +122,11 @@ textarea {
 }
 
 .temp_circle {
-  width: 70%;
+  width: 60%;
   border-radius: 50%;
-}
-
-.page_name {
-  vertical-align: -webkit-baseline-middle;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 35px;
-  color: #465866;
-}
-
-.temp_conversion {
-  vertical-align: -webkit-baseline-middle;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 28px;
-  letter-spacing: 15px;
-  color: #465866;
-}
-
-.temp_seperator {
-  font-weight: 400;
-  color: #ced2d4;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
 }
 
 .widgetContainer {
@@ -195,68 +168,6 @@ textarea {
   letter-spacing: -0.11px;
 }
 
-.searchContainer {
-  position: relative;
-  width: auto;
-  margin: 0 auto;
-}
-
-.centerThis {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 98%;
-}
-
-.searchForm {
-  display: block;
-  text-align: center;
-  top: 14px;
-}
-
-.searchForm input {
-  width: 55%;
-  max-width: 814px;
-  height: 52px;
-  border-radius: 50px;
-  padding-left: 25px;
-  border: 0.8px solid #aec2d2;
-  background-color: #fcfeff;
-  text-align: left;
-  outline: none;
-}
-
-.pageName {
-  display: block;
-  text-align: left;
-  left: 25px;
-  top: 12px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 35px;
-  color: #465866;
-}
-
-.fontWidgit {
-  display: block;
-  text-align: center;
-  top: 18px;
-  color: #94aec2;
-}
-
-.conversion {
-  display: block;
-  text-align: right;
-  top: 12px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 28px;
-  color: #fcfeff;
-  letter-spacing: 15px;
-  top: 15px;
-}
-
 .convertCelcius {
   background-color: #465866;
   border-radius: 50%;
@@ -271,4 +182,105 @@ textarea {
   padding-left: 15px;
   padding-bottom: 5px;
   padding-top: 5px;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageName {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  color: #465866;
+  width: 300px;
+  position: absolute;
+  top: 0px;
+  left: 30px;
+}
+
+.searchForm input {
+  max-width: 700px;
+  width: 500px;
+  height: 50px;
+  border-radius: 50px;
+  padding-left: 25px;
+  border: 0.8px solid #aec2d2;
+  background-color: #fcfeff;
+  text-align: left;
+  outline: none;
+}
+
+::placeholder {
+  color: #94aec2;
+  font-size: 20px;
+  letter-spacing: -0.1px;
+  text-align: left;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+
+input,
+textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  letter-spacing: -0.1px;
+  text-align: left;
+  font-weight: 500;
+  color: #465866;
+}
+
+.conversion {
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #fcfeff;
+  letter-spacing: 15px;
+  position: absolute;
+  top: 0px;
+  right: 30px;
+}
+
+.fontWidgit {
+  color: #94aec2;
+  position: relative;
+  left: 480px;
+}
+
+.locall,
+.currentt,
+.description {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.description,
+.currentt {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.11px;
+  text-transform: capitalize;
+  color: #465866;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.locall {
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  letter-spacing: -0.11px;
+  text-transform: capitalize;
+  color: #465866;
 }
