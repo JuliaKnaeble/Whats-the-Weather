@@ -15,13 +15,13 @@ body {
   align-items: center;
 }
 
-.temp_digit,
-.unit {
+.temp_digit {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 52px;
   letter-spacing: -0.11px;
   color: #465866;
+  margin-right: 59px;
 }
 
 .humid_wind {
@@ -31,13 +31,12 @@ body {
   letter-spacing: -0.11px;
   color: #465866;
   list-style: none;
+  margin-left: 59px;
 }
 
 .big_circle {
   height: 200px;
   width: 200px;
-  margin-left: 59px;
-  margin-right: 59px;
   border-radius: 50%;
 }
 
