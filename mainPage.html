@@ -26,7 +26,9 @@
 
   <body>
     <div class="header">
-      <div class="pageName"><strong>Circle</strong>Cast</div>
+      <div class="pageName">
+        <a href="index.html"><strong>Circle</strong>Cast</a>
+      </div>
       <div class="searchForm">
         <form id="first-search">
           <i class="fas fa-search fontWidgit"></i>
@@ -36,24 +38,25 @@
             placeholder="Search for a city"
             autocomplete="off"
             spellcheck="false"
+            autofocus
           />
         </form>
       </div>
       <div class="conversion">
-        <span class="convertCelcius">C</span>
-        <span class="convertFahrenheit">F</span>
+        <span class="unitSelected">C</span>
+        <span class="unitUnselected">F</span>
       </div>
     </div>
 
     <div class="mainInfo_group"></div>
     <div class="local" id="city"></div>
     <div class="current" id="date"></div>
-    <div class="capitalize description" id="weather-description"></div>
+    <div class="description" id="weather-description"></div>
 
     <div class="pageCenter">
       <div class="temp_digit">
         <span id="current-temp"></span>
-        <span class="unit">°C </span>
+        <span class="unit">°C</span>
       </div>
       <div class="big_circle" id="main-circle"></div>
       <div>

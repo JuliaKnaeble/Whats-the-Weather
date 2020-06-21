@@ -18,20 +18,28 @@ body {
 .temp_digit {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 35px;
   letter-spacing: -0.11px;
   color: #465866;
+  width: 200px;
   margin-right: 59px;
+  text-align: right;
 }
 
 .humid_wind {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: -0.11px;
   color: #465866;
   list-style: none;
   margin-left: 59px;
+  width: 200px;
+  text-align: left;
+}
+
+ul {
+  padding: 0;
 }
 
 .big_circle {
@@ -49,7 +57,7 @@ body {
   padding-top: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: -0.11px;
   color: #465866;
 }
@@ -57,7 +65,7 @@ body {
 .temp_future {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.11px;
   padding-top: 10px;
@@ -111,18 +119,17 @@ body {
   letter-spacing: -0.11px;
 }
 
-.convertCelcius {
+.unitSelected {
   background-color: #465866;
   border-radius: 50%;
-  padding-left: 12px;
+  padding-left: 11px;
   padding-bottom: 5px;
   padding-top: 5px;
 }
 
-.convertFahrenheit {
-  background-color: #465866;
-  border-radius: 50%;
-  padding-left: 15px;
+.unitUnselected {
+  color: #465866;
+  padding-left: 8px;
   padding-bottom: 5px;
   padding-top: 5px;
 }
@@ -147,6 +154,17 @@ body {
   left: 30px;
 }
 
+a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 35px;
+  color: #465866;
+}
+
+a:hover {
+  color: #465866;
+  text-decoration: none;
+}
 .searchForm input {
   max-width: 700px;
   width: 500px;
@@ -212,10 +230,6 @@ textarea {
   letter-spacing: -0.11px;
   text-transform: capitalize;
   color: #465866;
-}
-
-ul {
-  padding: 0;
 }
 
 .description {
