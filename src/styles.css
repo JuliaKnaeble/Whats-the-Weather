@@ -6,12 +6,6 @@ body {
   margin-top: 15px;
 }
 
-.test-rapper {
-  width: 90%;
-  display: block;
-  margin: 0 auto;
-}
-
 .local_detail {
   margin-top: 20px;
   margin-bottom: 50px;
@@ -98,7 +92,7 @@ ul {
   padding-top: 10px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: -0.11px;
   color: #465866;
 }
@@ -106,8 +100,8 @@ ul {
 .temp_future {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 500;
   letter-spacing: -0.11px;
   padding-top: 10px;
   color: #465866;
