@@ -245,3 +245,19 @@ textarea {
   text-transform: capitalize;
   color: #465866;
 }
+
+.condition_icon {
+  position: relative;
+  top: 98px;
+  left: 110px;
+  width: 100px;
+  height: 100px;
+}
+
+.condition_icon_small {
+  position: relative;
+  top: 40px;
+  left: 25px;
+  width: 40px;
+  height: 40px;
+}

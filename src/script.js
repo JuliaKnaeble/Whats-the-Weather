@@ -12,6 +12,13 @@ function showTemp(response) {
   document.querySelector(`#current-humidity`).innerHTML = Math.round(
     response.data.main.humidity
   );
+
+  let mainConditionIcon = response.data.weather[0].icon;
+  console.log(mainConditionIcon);
+  document
+    .querySelector(`#condiotion-i-main`)
+    .setAttribute("src", `asset/${mainConditionIcon}.png`);
+
   let latitude = response.data.coord.lat;
   let longitude = response.data.coord.lon;
   let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
@@ -143,6 +150,48 @@ function showForcast(response) {
     response.data.daily[6].temp.min
   );
 
+  let smallIconOne = response.data.daily[1].weather[0].icon;
+  console.log(smallIconOne);
+  document
+    .querySelector(`#cond-i-s-one`)
+    .setAttribute("src", `asset/${smallIconOne}.png`);
+
+  let smallIconTwo = response.data.daily[2].weather[0].icon;
+  console.log(smallIconTwo);
+  document
+    .querySelector(`#cond-i-s-two`)
+    .setAttribute("src", `asset/${smallIconTwo}.png`);
+
+  let smallIconThree = response.data.daily[3].weather[0].icon;
+  console.log(smallIconTwo);
+  document
+    .querySelector(`#cond-i-s-three`)
+    .setAttribute("src", `asset/${smallIconThree}.png`);
+
+  let smallIconFour = response.data.daily[4].weather[0].icon;
+  console.log(smallIconFour);
+  document
+    .querySelector(`#cond-i-s-four`)
+    .setAttribute("src", `asset/${smallIconFour}.png`);
+
+  let smallIconFive = response.data.daily[5].weather[0].icon;
+  console.log(smallIconFive);
+  document
+    .querySelector(`#cond-i-s-five`)
+    .setAttribute("src", `asset/${smallIconFive}.png`);
+
+  let smallIconSix = response.data.daily[6].weather[0].icon;
+  console.log(smallIconSix);
+  document
+    .querySelector(`#cond-i-s-six`)
+    .setAttribute("src", `asset/${smallIconSix}.png`);
+
+  let smallIconSeven = response.data.daily[7].weather[0].icon;
+  console.log(smallIconSeven);
+  document
+    .querySelector(`#cond-i-s-seven`)
+    .setAttribute("src", `asset/${smallIconSeven}.png`);
+
   let currentTemp = Math.round(response.data.current.temp);
   if (currentTemp >= 44) {
     document.querySelector(`#main-circle`).style.backgroundColor = `#801109`;
@@ -186,8 +235,7 @@ function showForcast(response) {
     document.querySelector(`#main-circle`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempOne = Math.round(response.data.daily[0].temp.max);
-  console.log(upcommingTempOne);
+  let upcommingTempOne = Math.round(response.data.daily[1].temp.max);
   if (upcommingTempOne >= 44) {
     document.querySelector(`#circle-one`).style.backgroundColor = `#801109`;
   } else if (upcommingTempOne >= 40) {
@@ -230,8 +278,7 @@ function showForcast(response) {
     document.querySelector(`#circle-one`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempTwo = Math.round(response.data.daily[1].temp.max);
-  console.log(upcommingTempTwo);
+  let upcommingTempTwo = Math.round(response.data.daily[2].temp.max);
   if (upcommingTempTwo >= 44) {
     document.querySelector(`#circle-two`).style.backgroundColor = `#801109`;
   } else if (upcommingTempTwo >= 40) {
@@ -274,7 +321,7 @@ function showForcast(response) {
     document.querySelector(`#circle-two`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempThree = Math.round(response.data.daily[2].temp.max);
+  let upcommingTempThree = Math.round(response.data.daily[3].temp.max);
   if (upcommingTempThree >= 44) {
     document.querySelector(`#circle-three`).style.backgroundColor = `#801109`;
   } else if (upcommingTempThree >= 40) {
@@ -317,7 +364,7 @@ function showForcast(response) {
     document.querySelector(`#circle-three`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempFour = Math.round(response.data.daily[3].temp.max);
+  let upcommingTempFour = Math.round(response.data.daily[4].temp.max);
   if (upcommingTempFour >= 44) {
     document.querySelector(`#circle-four`).style.backgroundColor = `#801109`;
   } else if (upcommingTempFour >= 40) {
@@ -360,7 +407,7 @@ function showForcast(response) {
     document.querySelector(`#circle-four`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempFive = Math.round(response.data.daily[4].temp.max);
+  let upcommingTempFive = Math.round(response.data.daily[5].temp.max);
   if (upcommingTempFive >= 44) {
     document.querySelector(`#circle-five`).style.backgroundColor = `#801109`;
   } else if (upcommingTempFive >= 40) {
@@ -403,7 +450,7 @@ function showForcast(response) {
     document.querySelector(`#circle-five`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempSix = Math.round(response.data.daily[5].temp.max);
+  let upcommingTempSix = Math.round(response.data.daily[6].temp.max);
   if (upcommingTempSix >= 44) {
     document.querySelector(`#circle-six`).style.backgroundColor = `#801109`;
   } else if (upcommingTempSix >= 40) {
@@ -446,7 +493,7 @@ function showForcast(response) {
     document.querySelector(`#circle-six`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempSeven = Math.round(response.data.daily[6].temp.max);
+  let upcommingTempSeven = Math.round(response.data.daily[7].temp.max);
   if (upcommingTempSeven >= 44) {
     document.querySelector(`#circle-seven`).style.backgroundColor = `#801109`;
   } else if (upcommingTempSeven >= 40) {
