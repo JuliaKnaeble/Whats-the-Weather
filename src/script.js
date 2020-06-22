@@ -1,9 +1,8 @@
 // displaying the value of the search and calls forcast api -> function show forcast
 function showTemp(response) {
   document.querySelector(`#city`).innerHTML = response.data.name;
-  document.querySelector(`#current-temp`).innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celciusTemp = Math.round(response.data.main.temp);
+  document.querySelector(`#current-temp`).innerHTML = celciusTemp;
   document.querySelector(`#weather-condition`).innerHTML =
     response.data.weather[0].description;
   document.querySelector(`#current-wind`).innerHTML = Math.round(
@@ -575,3 +574,53 @@ let initalSearch = document.querySelector(`#first-search`);
 if (initalSearch) {
   initalSearch.addEventListener(`submit`, firstSearchCity);
 }
+
+//
+let celciusTemp = null;
+
+//Convert to Fahrenheit
+function convertUnitFahrenheit(event) {
+  event.preventDefault();
+  if (
+    document
+      .querySelector(`#unitCelcius`)
+      .classList.contains("celcius-selected")
+  ) {
+    document
+      .querySelector(`#unitCelcius`)
+      .classList.replace("celcius-selected", "celcius");
+  }
+  document
+    .querySelector(`#unitFahrenheit`)
+    .classList.replace("fahrenheit", "fahrenheit-selected");
+  let convertUnit = Math.round((celciusTemp * 9) / 5 + 32);
+  document.querySelector(`#current-temp`).innerHTML = convertUnit;
+}
+
+//Convert to Celcius
+function convertUnitCelcius(event) {
+  event.preventDefault();
+  if (
+    document
+      .querySelector(`#unitFahrenheit`)
+      .classList.contains("fahrenheit-selected")
+  ) {
+    document
+      .querySelector(`#unitFahrenheit`)
+      .classList.replace("fahrenheit-selected", "fahrenheit");
+  }
+  document
+    .querySelector(`#unitCelcius`)
+    .classList.replace("celcius", "celcius-selected");
+  document.querySelector(`#current-temp`).innerHTML = celciusTemp;
+}
+
+// Select Fahrenheit
+document
+  .querySelector(`#unitFahrenheit`)
+  .addEventListener(`click`, convertUnitFahrenheit);
+
+// Select Celcius
+document
+  .querySelector(`#unitCelcius`)
+  .addEventListener(`click`, convertUnitCelcius);

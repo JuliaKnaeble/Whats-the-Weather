@@ -122,19 +122,65 @@ ul {
   letter-spacing: -0.11px;
 }
 
-.unitSelected {
-  background-color: #465866;
-  border-radius: 50%;
-  padding-left: 11px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+.conversion {
+  text-align: right;
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  height: 60px;
 }
 
-.unitUnselected {
+.fahrenheit-selected {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #fcfeff;
+  letter-spacing: 15px;
+  background-color: #465866;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.celcius-selected {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #fcfeff;
+  letter-spacing: 15px;
+  background-color: #465866;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.celcius {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
   color: #465866;
-  padding-left: 8px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  letter-spacing: 15px;
+  width: 50px;
+  height: 50px;
+}
+
+.fahrenheit {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #465866;
+  letter-spacing: 15px;
+  width: 50px;
+  height: 50px;
+}
+
+.test {
+  background-color: darkred;
+}
+
+.unitSelected:hover,
+.unitUnselected:hover {
+  cursor: pointer;
 }
 
 .header {
@@ -197,18 +243,6 @@ textarea {
   text-align: left;
   font-weight: 500;
   color: #465866;
-}
-
-.conversion {
-  text-align: right;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 28px;
-  color: #fcfeff;
-  letter-spacing: 15px;
-  position: absolute;
-  top: 0px;
-  right: 30px;
 }
 
 .fontWidgit {
