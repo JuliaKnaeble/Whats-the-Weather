@@ -13,6 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 200px;
 }
 
 .temp_digit {
@@ -46,6 +47,7 @@ ul {
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  background-color: #fdf5dd;
 }
 
 .col {
@@ -78,6 +80,7 @@ ul {
   height: 80px;
   display: block;
   margin: 0 auto;
+  background-color: #fdf5dd;
 }
 
 .widgetContainer {
@@ -216,13 +219,13 @@ textarea {
 
 .local,
 .current,
-.description {
+.condition {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.description,
+.condition,
 .current {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
@@ -230,9 +233,10 @@ textarea {
   letter-spacing: -0.11px;
   text-transform: capitalize;
   color: #465866;
+  height: 24px;
 }
 
-.description {
+.condition {
   margin-bottom: 20px;
 }
 
@@ -244,6 +248,7 @@ textarea {
   letter-spacing: -0.11px;
   text-transform: capitalize;
   color: #465866;
+  height: 78px;
 }
 
 .condition_icon {

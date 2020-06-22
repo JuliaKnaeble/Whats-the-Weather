@@ -4,7 +4,7 @@ function showTemp(response) {
   document.querySelector(`#current-temp`).innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector(`#weather-description`).innerHTML =
+  document.querySelector(`#weather-condition`).innerHTML =
     response.data.weather[0].description;
   document.querySelector(`#current-wind`).innerHTML = Math.round(
     response.data.wind.speed
