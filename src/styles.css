@@ -47,7 +47,7 @@ ul {
   height: 200px;
   width: 200px;
   border-radius: 50%;
-  background-color: #fdf5dd;
+  background-color: #f4f4f4;
 }
 
 .col {
@@ -80,7 +80,7 @@ ul {
   height: 80px;
   display: block;
   margin: 0 auto;
-  background-color: #fdf5dd;
+  background-color: #f4f4f4;
 }
 
 .widgetContainer {
