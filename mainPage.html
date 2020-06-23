@@ -42,10 +42,10 @@
           />
         </form>
       </div>
-      <div class="conversion">
+      <div>
         <a href="http://">
-          <span class="celcius" id="unitCelcius">C</span>
-          <span class="fahrenheit" id="unitFahrenheit">F</span>
+          <span class="c-selected conversion-c" id="unitCelcius">C</span>
+          <span class="fahrenheit conversion-f" id="unitFahrenheit">F</span>
         </a>
       </div>
     </div>
@@ -57,7 +57,7 @@
 
     <div class="pageCenter">
       <div class="temp_digit">
-        <span id="current-temp"></span>
+        <span class="unit-digit" id="current-temp"></span>
         <span class="unit">°C</span>
       </div>
       <div class="big_circle" id="main-circle">
@@ -90,7 +90,10 @@
             </div>
             <p class="day_future" id="today"></p>
             <p class="temp_future">
-              <span id="one-max"></span>°C / <span id="one-min"></span>°C
+              <span class="unit-digit" id="one-max"></span
+              ><span class="unit">°C</span> /
+              <span class="unit-digit" id="one-min"></span
+              ><span class="unit">°C</span>
             </p>
           </div>
 
@@ -105,7 +108,10 @@
             </div>
             <p class="day_future" id="tomorrow"></p>
             <p class="temp_future">
-              <span id="two-max"></span>°C / <span id="two-min"></span>°C
+              <span class="unit-digit" id="two-max"></span
+              ><span class="unit">°C</span> /
+              <span class="unit-digit" id="two-min"></span
+              ><span class="unit">°C</span>
             </p>
           </div>
 
@@ -120,7 +126,10 @@
             </div>
             <p class="day_future" id="day-three"></p>
             <p class="temp_future">
-              <span id="three-max"></span>°C / <span id="three-min"></span>°C
+              <span class="unit-digit" id="three-max"></span
+              ><span class="unit">°C</span> /
+              <span class="unit-digit" id="three-min"></span
+              ><span class="unit">°C</span>
             </p>
           </div>
 
@@ -135,7 +144,10 @@
             </div>
             <p class="day_future" id="day-four"></p>
             <p class="temp_future">
-              <span id="four-max"></span>°C / <span id="four-min"></span>°C
+              <span class="unit-digit" id="four-max"></span
+              ><span class="unit">°C</span> /
+              <span class="unit-digit" id="four-min"></span
+              ><span class="unit">°C</span>
             </p>
           </div>
 
@@ -150,7 +162,10 @@
             </div>
             <p class="day_future" id="day-five"></p>
             <p class="temp_future">
-              <span id="five-max"></span>°C / <span id="five-min"></span>°C
+              <span class="unit-digit" id="five-max"></span
+              ><span class="unit">°C</span> /
+              <span class="unit-digit" id="five-min"></span
+              ><span class="unit">°C</span>
             </p>
           </div>
 
@@ -165,7 +180,10 @@
             </div>
             <p class="day_future" id="day-six"></p>
             <p class="temp_future">
-              <span id="six-max"></span>°C / <span id="six-min"></span>°C
+              <span class="unit-digit" id="six-max"></span
+              ><span class="unit">°C</span> /
+              <span class="unit-digit" id="six-min"></span
+              ><span class="unit">°C</span>
             </p>
           </div>
 
@@ -180,7 +198,10 @@
             </div>
             <p class="day_future" id="day-seven"></p>
             <p class="temp_future">
-              <span id="seven-max"></span>°C / <span id="seven-min"></span>°C
+              <span class="unit-digit" id="seven-max"></span
+              ><span class="unit">°C</span> /
+              <span class="unit-digit" id="seven-min"></span
+              ><span class="unit">°C</span>
             </p>
           </div>
         </div>

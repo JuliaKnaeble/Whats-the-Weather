@@ -122,65 +122,40 @@ ul {
   letter-spacing: -0.11px;
 }
 
-.conversion {
-  text-align: right;
+.conversion-f,
+.conversion-c {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
   position: absolute;
   top: 0px;
-  right: 30px;
-  height: 60px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  letter-spacing: 15px;
 }
 
-.fahrenheit-selected {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 28px;
+.conversion-f {
+  padding-left: 11px;
+  right: 25px;
+}
+
+.conversion-c {
+  padding-left: 9px;
+  right: 80px;
+}
+
+.f-selected,
+.c-selected {
   color: #fcfeff;
-  letter-spacing: 15px;
   background-color: #465866;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  cursor: default;
 }
 
-.celcius-selected {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 28px;
-  color: #fcfeff;
-  letter-spacing: 15px;
-  background-color: #465866;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-}
-
-.celcius {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 28px;
-  color: #465866;
-  letter-spacing: 15px;
-  width: 50px;
-  height: 50px;
-}
-
+.celcius,
 .fahrenheit {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 28px;
   color: #465866;
-  letter-spacing: 15px;
-  width: 50px;
-  height: 50px;
-}
-
-.test {
-  background-color: darkred;
-}
-
-.unitSelected:hover,
-.unitUnselected:hover {
-  cursor: pointer;
 }
 
 .header {

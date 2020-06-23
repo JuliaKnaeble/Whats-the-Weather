@@ -1,6 +1,7 @@
 // displaying the value of the search and calls forcast api -> function show forcast
 function showTemp(response) {
-  document.querySelector(`#city`).innerHTML = response.data.name;
+  let city = document.querySelector(`#city`);
+  city.innerHTML = response.data.name;
   celciusTemp = Math.round(response.data.main.temp);
   document.querySelector(`#current-temp`).innerHTML = celciusTemp;
   document.querySelector(`#weather-condition`).innerHTML =
@@ -13,7 +14,6 @@ function showTemp(response) {
   );
 
   let mainConditionIcon = response.data.weather[0].icon;
-  console.log(mainConditionIcon);
   document
     .querySelector(`#condiotion-i-main`)
     .setAttribute("src", `asset/${mainConditionIcon}.png`);
@@ -150,43 +150,36 @@ function showForcast(response) {
   );
 
   let smallIconOne = response.data.daily[1].weather[0].icon;
-  console.log(smallIconOne);
   document
     .querySelector(`#cond-i-s-one`)
     .setAttribute("src", `asset/${smallIconOne}.png`);
 
   let smallIconTwo = response.data.daily[2].weather[0].icon;
-  console.log(smallIconTwo);
   document
     .querySelector(`#cond-i-s-two`)
     .setAttribute("src", `asset/${smallIconTwo}.png`);
 
   let smallIconThree = response.data.daily[3].weather[0].icon;
-  console.log(smallIconTwo);
   document
     .querySelector(`#cond-i-s-three`)
     .setAttribute("src", `asset/${smallIconThree}.png`);
 
   let smallIconFour = response.data.daily[4].weather[0].icon;
-  console.log(smallIconFour);
   document
     .querySelector(`#cond-i-s-four`)
     .setAttribute("src", `asset/${smallIconFour}.png`);
 
   let smallIconFive = response.data.daily[5].weather[0].icon;
-  console.log(smallIconFive);
   document
     .querySelector(`#cond-i-s-five`)
     .setAttribute("src", `asset/${smallIconFive}.png`);
 
   let smallIconSix = response.data.daily[6].weather[0].icon;
-  console.log(smallIconSix);
   document
     .querySelector(`#cond-i-s-six`)
     .setAttribute("src", `asset/${smallIconSix}.png`);
 
   let smallIconSeven = response.data.daily[7].weather[0].icon;
-  console.log(smallIconSeven);
   document
     .querySelector(`#cond-i-s-seven`)
     .setAttribute("src", `asset/${smallIconSeven}.png`);
@@ -540,9 +533,8 @@ function showForcast(response) {
 function search(city) {
   let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
   let openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather`;
-  axios
-    .get(`${openWeatherUrl}?q=${city}&appid=${apiKeyWeather}&units=metric`)
-    .then(showTemp);
+  let url = `${openWeatherUrl}?q=${city}&appid=${apiKeyWeather}&units=metric`;
+  axios.get(url).then(showTemp);
 }
 
 //storing the value of the search on mainPage-> function search
@@ -581,38 +573,40 @@ let celciusTemp = null;
 //Convert to Fahrenheit
 function convertUnitFahrenheit(event) {
   event.preventDefault();
-  if (
+  if (document.querySelector(`#unitCelcius`).classList.contains("c-selected")) {
     document
       .querySelector(`#unitCelcius`)
-      .classList.contains("celcius-selected")
-  ) {
-    document
-      .querySelector(`#unitCelcius`)
-      .classList.replace("celcius-selected", "celcius");
+      .classList.replace("c-selected", "celcius");
   }
   document
     .querySelector(`#unitFahrenheit`)
-    .classList.replace("fahrenheit", "fahrenheit-selected");
+    .classList.replace("fahrenheit", "f-selected");
   let convertUnit = Math.round((celciusTemp * 9) / 5 + 32);
   document.querySelector(`#current-temp`).innerHTML = convertUnit;
+  let unit = document.querySelectorAll(".unit");
+  unit.forEach(function (change) {
+    change.innerHTML = `°F`;
+  });
 }
 
 //Convert to Celcius
 function convertUnitCelcius(event) {
   event.preventDefault();
   if (
-    document
-      .querySelector(`#unitFahrenheit`)
-      .classList.contains("fahrenheit-selected")
+    document.querySelector(`#unitFahrenheit`).classList.contains("f-selected")
   ) {
     document
       .querySelector(`#unitFahrenheit`)
-      .classList.replace("fahrenheit-selected", "fahrenheit");
+      .classList.replace("f-selected", "fahrenheit");
   }
   document
     .querySelector(`#unitCelcius`)
-    .classList.replace("celcius", "celcius-selected");
+    .classList.replace("celcius", "c-selected");
   document.querySelector(`#current-temp`).innerHTML = celciusTemp;
+  let unit = document.querySelectorAll(".unit");
+  unit.forEach(function (change) {
+    change.innerHTML = `°C`;
+  });
 }
 
 // Select Fahrenheit
