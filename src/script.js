@@ -650,6 +650,20 @@ function convertUnitCelcius(event) {
     .querySelector(`#unitCelcius`)
     .classList.replace("celcius", "c-selected");
   document.querySelector(`#current-temp`).innerHTML = celciusTemp;
+  document.querySelector(`#one-max`).innerHTML = cOneMax;
+  document.querySelector(`#one-min`).innerHTML = cOneMin;
+  document.querySelector(`#two-max`).innerHTML = cTwoMax;
+  document.querySelector(`#two-min`).innerHTML = cTwoMin;
+  document.querySelector(`#three-max`).innerHTML = cThreeMax;
+  document.querySelector(`#three-min`).innerHTML = cThreeMin;
+  document.querySelector(`#four-max`).innerHTML = cFourMax;
+  document.querySelector(`#four-min`).innerHTML = cFourMin;
+  document.querySelector(`#five-max`).innerHTML = cFiveMax;
+  document.querySelector(`#five-min`).innerHTML = cFiveMin;
+  document.querySelector(`#six-max`).innerHTML = cSixMax;
+  document.querySelector(`#six-min`).innerHTML = cSixMin;
+  document.querySelector(`#seven-max`).innerHTML = cSevenMax;
+  document.querySelector(`#seven-min`).innerHTML = cSevenMin;
   let unit = document.querySelectorAll(".unit");
   unit.forEach(function (change) {
     change.innerHTML = `°C`;
