@@ -100,54 +100,41 @@ function showForcast(response) {
   let timezone = response.data.timezone;
   let timeUrl = `https://worldtimeapi.org/api/timezone/`;
   axios.get(`${timeUrl}${timezone}`).then(showTime);
-  document.querySelector(`#one-max`).innerHTML = Math.round(
-    response.data.daily[0].temp.max
-  );
-  document.querySelector(`#one-min`).innerHTML = Math.round(
-    response.data.daily[0].temp.min
-  );
+  cOneMax = Math.round(response.data.daily[0].temp.max);
+  document.querySelector(`#one-max`).innerHTML = cOneMax;
+  cOneMin = Math.round(response.data.daily[0].temp.min);
+  document.querySelector(`#one-min`).innerHTML = cOneMin;
 
-  document.querySelector(`#two-max`).innerHTML = Math.round(
-    response.data.daily[1].temp.max
-  );
-  document.querySelector(`#two-min`).innerHTML = Math.round(
-    response.data.daily[1].temp.min
-  );
+  cTwoMax = Math.round(response.data.daily[1].temp.max);
+  document.querySelector(`#two-max`).innerHTML = cTwoMax;
+  cTwoMin = Math.round(response.data.daily[1].temp.min);
+  document.querySelector(`#two-min`).innerHTML = cTwoMin;
 
-  document.querySelector(`#three-max`).innerHTML = Math.round(
-    response.data.daily[2].temp.max
-  );
-  document.querySelector(`#three-min`).innerHTML = Math.round(
-    response.data.daily[2].temp.min
-  );
+  cThreeMax = Math.round(response.data.daily[2].temp.max);
 
-  document.querySelector(`#four-max`).innerHTML = Math.round(
-    response.data.daily[3].temp.max
-  );
-  document.querySelector(`#four-min`).innerHTML = Math.round(
-    response.data.daily[3].temp.min
-  );
+  document.querySelector(`#three-max`).innerHTML = cThreeMax;
+  cThreeMin = Math.round(response.data.daily[2].temp.min);
+  document.querySelector(`#three-min`).innerHTML = cTwoMin;
 
-  document.querySelector(`#five-max`).innerHTML = Math.round(
-    response.data.daily[4].temp.max
-  );
-  document.querySelector(`#five-min`).innerHTML = Math.round(
-    response.data.daily[4].temp.min
-  );
+  cFourMax = Math.round(response.data.daily[3].temp.max);
+  document.querySelector(`#four-max`).innerHTML = cFourMax;
+  cFourMin = Math.round(response.data.daily[3].temp.min);
+  document.querySelector(`#four-min`).innerHTML = cFourMin;
 
-  document.querySelector(`#six-max`).innerHTML = Math.round(
-    response.data.daily[5].temp.max
-  );
-  document.querySelector(`#six-min`).innerHTML = Math.round(
-    response.data.daily[5].temp.min
-  );
+  cFiveMax = Math.round(response.data.daily[4].temp.max);
+  document.querySelector(`#five-max`).innerHTML = cFiveMax;
+  cFiveMin = Math.round(response.data.daily[4].temp.min);
+  document.querySelector(`#five-min`).innerHTML = cFiveMin;
 
-  document.querySelector(`#seven-max`).innerHTML = Math.round(
-    response.data.daily[6].temp.max
-  );
-  document.querySelector(`#seven-min`).innerHTML = Math.round(
-    response.data.daily[6].temp.min
-  );
+  cSixMax = Math.round(response.data.daily[5].temp.max);
+  document.querySelector(`#six-max`).innerHTML = cSixMax;
+  cSixMin = Math.round(response.data.daily[5].temp.min);
+  document.querySelector(`#six-min`).innerHTML = cSixMin;
+
+  cSevenMax = Math.round(response.data.daily[6].temp.max);
+  document.querySelector(`#seven-max`).innerHTML = cSevenMax;
+  cSevenMin = Math.round(response.data.daily[6].temp.min);
+  document.querySelector(`#seven-min`).innerHTML = cSevenMin;
 
   let smallIconOne = response.data.daily[1].weather[0].icon;
   document
@@ -567,8 +554,22 @@ if (initalSearch) {
   initalSearch.addEventListener(`submit`, firstSearchCity);
 }
 
-//
+// set celcius to 0 on global lvl
 let celciusTemp = null;
+let cOneMax = null;
+let cOneMin = null;
+let cTwoMax = null;
+let cTwoMin = null;
+let cThreeMax = null;
+let cThreeMin = null;
+let cFourMax = null;
+let cFourMin = null;
+let cFiveMax = null;
+let cFiveMin = null;
+let cSixMax = null;
+let cSixMin = null;
+let cSevenMax = null;
+let cSevenMin = null;
 
 //Convert to Fahrenheit
 function convertUnitFahrenheit(event) {
@@ -583,10 +584,56 @@ function convertUnitFahrenheit(event) {
     .classList.replace("fahrenheit", "f-selected");
   let convertUnit = Math.round((celciusTemp * 9) / 5 + 32);
   document.querySelector(`#current-temp`).innerHTML = convertUnit;
+
+  let convertOneMax = Math.round((cOneMax * 9) / 5 + 32);
+  document.querySelector(`#one-max`).innerHTML = convertOneMax;
+  let convertOneMin = Math.round((cOneMin * 9) / 5 + 32);
+  document.querySelector(`#one-min`).innerHTML = convertOneMin;
+
+  let convertTwoMax = Math.round((cTwoMax * 9) / 5 + 32);
+  document.querySelector(`#two-max`).innerHTML = convertTwoMax;
+  let convertTwoMin = Math.round((cTwoMin * 9) / 5 + 32);
+  document.querySelector(`#two-min`).innerHTML = convertTwoMin;
+
+  let convertThreeMax = Math.round((cThreeMax * 9) / 5 + 32);
+  document.querySelector(`#three-max`).innerHTML = convertThreeMax;
+  let convertThreeMin = Math.round((cThreeMin * 9) / 5 + 32);
+  document.querySelector(`#three-min`).innerHTML = convertThreeMin;
+
+  let convertFourMax = Math.round((cFourMax * 9) / 5 + 32);
+  document.querySelector(`#four-max`).innerHTML = convertFourMax;
+  let convertFourMin = Math.round((cFourMin * 9) / 5 + 32);
+  document.querySelector(`#four-min`).innerHTML = convertFourMin;
+
+  let convertFiveMax = Math.round((cFiveMax * 9) / 5 + 32);
+  document.querySelector(`#five-max`).innerHTML = convertFiveMax;
+  let convertFiveMin = Math.round((cFiveMin * 9) / 5 + 32);
+  document.querySelector(`#five-min`).innerHTML = convertFiveMin;
+
+  let convertSixMax = Math.round((cSixMax * 9) / 5 + 32);
+  document.querySelector(`#six-max`).innerHTML = convertSixMax;
+  let convertSixMin = Math.round((cSixMin * 9) / 5 + 32);
+  document.querySelector(`#six-min`).innerHTML = convertSixMin;
+
+  let convertSevenMax = Math.round((cSevenMax * 9) / 5 + 32);
+  document.querySelector(`#seven-max`).innerHTML = convertSevenMax;
+  let convertSevenMin = Math.round((cSevenMin * 9) / 5 + 32);
+  document.querySelector(`#seven-min`).innerHTML = convertSevenMin;
+
   let unit = document.querySelectorAll(".unit");
   unit.forEach(function (change) {
     change.innerHTML = `°F`;
   });
+
+  //let latitude = response.data.coord.lat;
+  //let longitude = response.data.coord.lon;
+  //let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
+  //let weatherForcastUrl = `https://api.openweathermap.org/data/2.5/onecall`;
+  //axios
+  //  .get(
+  //   `${weatherForcastUrl}?lat=${latitude}&lon=${longitude}&appid=${apiKeyWeather}&units=imperial`
+  // )
+  //  .then(showForcastFahrenheit);
 }
 
 //Convert to Celcius
