@@ -104,7 +104,6 @@ ul {
 }
 
 .widgetContainer {
-  width: auto;
   width: 760px;
   top: 300px;
   position: relative;
@@ -307,11 +306,14 @@ textarea {
 }
 
 footer {
-  padding-top: 230px;
-  padding-left: 5px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 12px;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  color: #465866;
+  text-align: center;
 }
 
 footer a {
