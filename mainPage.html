@@ -49,160 +49,161 @@
         </a>
       </div>
     </div>
+    <div class="main-page-info">
+      <div class="mainInfo_group"></div>
+      <div class="local" id="city"></div>
+      <div class="current" id="date"></div>
+      <div class="condition" id="weather-condition"></div>
 
-    <div class="mainInfo_group"></div>
-    <div class="local" id="city"></div>
-    <div class="current" id="date"></div>
-    <div class="condition" id="weather-condition"></div>
-
-    <div class="pageCenter">
-      <div class="temp_digit">
-        <span class="unit-digit" id="current-temp"></span>
-        <span class="unit">°C</span>
+      <div class="pageCenter">
+        <div class="temp_digit">
+          <span class="unit-digit" id="current-temp"></span>
+          <span class="unit">°C</span>
+        </div>
+        <div class="big_circle" id="main-circle">
+          <img
+            src="asset/01d.png"
+            alt=""
+            class="condition_icon"
+            id="condiotion-i-main"
+          />
+        </div>
+        <div>
+          <ul class="humid_wind">
+            <li>Humidity:&nbsp <span id="current-humidity"></span>%</li>
+            <li>Wind:&nbsp <span id="current-wind"></span>km/h</li>
+          </ul>
+        </div>
       </div>
-      <div class="big_circle" id="main-circle">
-        <img
-          src="asset/01d.png"
-          alt=""
-          class="condition_icon"
-          id="condiotion-i-main"
-        />
-      </div>
-      <div>
-        <ul class="humid_wind">
-          <li>Humidity:&nbsp <span id="current-humidity"></span>%</li>
-          <li>Wind:&nbsp <span id="current-wind"></span>km/h</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="container">
-      <div class="forcast">
-        <div class="row">
-          <div class="col">
-            <div class="temp_circle" id="circle-one">
-              <img
-                src="asset/01d.png"
-                alt=""
-                class="condition_icon_small"
-                id="cond-i-s-one"
-              />
+      <div class="container">
+        <div class="forcast">
+          <div class="row">
+            <div class="col">
+              <div class="temp_circle" id="circle-one">
+                <img
+                  src="asset/01d.png"
+                  alt=""
+                  class="condition_icon_small"
+                  id="cond-i-s-one"
+                />
+              </div>
+              <p class="day_future" id="today"></p>
+              <p class="temp_future">
+                <span class="unit-digit" id="one-max"></span
+                ><span class="unit">°C</span> /
+                <span class="unit-digit" id="one-min"></span
+                ><span class="unit">°C</span>
+              </p>
             </div>
-            <p class="day_future" id="today"></p>
-            <p class="temp_future">
-              <span class="unit-digit" id="one-max"></span
-              ><span class="unit">°C</span> /
-              <span class="unit-digit" id="one-min"></span
-              ><span class="unit">°C</span>
-            </p>
-          </div>
 
-          <div class="col">
-            <div class="temp_circle" id="circle-two">
-              <img
-                src="asset/01d.png"
-                alt=""
-                class="condition_icon_small"
-                id="cond-i-s-two"
-              />
+            <div class="col">
+              <div class="temp_circle" id="circle-two">
+                <img
+                  src="asset/01d.png"
+                  alt=""
+                  class="condition_icon_small"
+                  id="cond-i-s-two"
+                />
+              </div>
+              <p class="day_future" id="tomorrow"></p>
+              <p class="temp_future">
+                <span class="unit-digit" id="two-max"></span
+                ><span class="unit">°C</span> /
+                <span class="unit-digit" id="two-min"></span
+                ><span class="unit">°C</span>
+              </p>
             </div>
-            <p class="day_future" id="tomorrow"></p>
-            <p class="temp_future">
-              <span class="unit-digit" id="two-max"></span
-              ><span class="unit">°C</span> /
-              <span class="unit-digit" id="two-min"></span
-              ><span class="unit">°C</span>
-            </p>
-          </div>
 
-          <div class="col">
-            <div class="temp_circle" id="circle-three">
-              <img
-                src="asset/01d.png"
-                alt=""
-                class="condition_icon_small"
-                id="cond-i-s-three"
-              />
+            <div class="col">
+              <div class="temp_circle" id="circle-three">
+                <img
+                  src="asset/01d.png"
+                  alt=""
+                  class="condition_icon_small"
+                  id="cond-i-s-three"
+                />
+              </div>
+              <p class="day_future" id="day-three"></p>
+              <p class="temp_future">
+                <span class="unit-digit" id="three-max"></span
+                ><span class="unit">°C</span> /
+                <span class="unit-digit" id="three-min"></span
+                ><span class="unit">°C</span>
+              </p>
             </div>
-            <p class="day_future" id="day-three"></p>
-            <p class="temp_future">
-              <span class="unit-digit" id="three-max"></span
-              ><span class="unit">°C</span> /
-              <span class="unit-digit" id="three-min"></span
-              ><span class="unit">°C</span>
-            </p>
-          </div>
 
-          <div class="col">
-            <div class="temp_circle" id="circle-four">
-              <img
-                src="asset/01d.png"
-                alt=""
-                class="condition_icon_small"
-                id="cond-i-s-four"
-              />
+            <div class="col">
+              <div class="temp_circle" id="circle-four">
+                <img
+                  src="asset/01d.png"
+                  alt=""
+                  class="condition_icon_small"
+                  id="cond-i-s-four"
+                />
+              </div>
+              <p class="day_future" id="day-four"></p>
+              <p class="temp_future">
+                <span class="unit-digit" id="four-max"></span
+                ><span class="unit">°C</span> /
+                <span class="unit-digit" id="four-min"></span
+                ><span class="unit">°C</span>
+              </p>
             </div>
-            <p class="day_future" id="day-four"></p>
-            <p class="temp_future">
-              <span class="unit-digit" id="four-max"></span
-              ><span class="unit">°C</span> /
-              <span class="unit-digit" id="four-min"></span
-              ><span class="unit">°C</span>
-            </p>
-          </div>
 
-          <div class="col">
-            <div class="temp_circle" id="circle-five">
-              <img
-                src="asset/01d.png"
-                alt=""
-                class="condition_icon_small"
-                id="cond-i-s-five"
-              />
+            <div class="col">
+              <div class="temp_circle" id="circle-five">
+                <img
+                  src="asset/01d.png"
+                  alt=""
+                  class="condition_icon_small"
+                  id="cond-i-s-five"
+                />
+              </div>
+              <p class="day_future" id="day-five"></p>
+              <p class="temp_future">
+                <span class="unit-digit" id="five-max"></span
+                ><span class="unit">°C</span> /
+                <span class="unit-digit" id="five-min"></span
+                ><span class="unit">°C</span>
+              </p>
             </div>
-            <p class="day_future" id="day-five"></p>
-            <p class="temp_future">
-              <span class="unit-digit" id="five-max"></span
-              ><span class="unit">°C</span> /
-              <span class="unit-digit" id="five-min"></span
-              ><span class="unit">°C</span>
-            </p>
-          </div>
 
-          <div class="col">
-            <div class="temp_circle" id="circle-six">
-              <img
-                src="asset/01d.png"
-                alt=""
-                class="condition_icon_small"
-                id="cond-i-s-six"
-              />
+            <div class="col">
+              <div class="temp_circle" id="circle-six">
+                <img
+                  src="asset/01d.png"
+                  alt=""
+                  class="condition_icon_small"
+                  id="cond-i-s-six"
+                />
+              </div>
+              <p class="day_future" id="day-six"></p>
+              <p class="temp_future">
+                <span class="unit-digit" id="six-max"></span
+                ><span class="unit">°C</span> /
+                <span class="unit-digit" id="six-min"></span
+                ><span class="unit">°C</span>
+              </p>
             </div>
-            <p class="day_future" id="day-six"></p>
-            <p class="temp_future">
-              <span class="unit-digit" id="six-max"></span
-              ><span class="unit">°C</span> /
-              <span class="unit-digit" id="six-min"></span
-              ><span class="unit">°C</span>
-            </p>
-          </div>
 
-          <div class="col">
-            <div class="temp_circle" id="circle-seven">
-              <img
-                src="asset/01d.png"
-                alt=""
-                class="condition_icon_small"
-                id="cond-i-s-seven"
-              />
+            <div class="col">
+              <div class="temp_circle" id="circle-seven">
+                <img
+                  src="asset/01d.png"
+                  alt=""
+                  class="condition_icon_small"
+                  id="cond-i-s-seven"
+                />
+              </div>
+              <p class="day_future" id="day-seven"></p>
+              <p class="temp_future">
+                <span class="unit-digit" id="seven-max"></span
+                ><span class="unit">°C</span> /
+                <span class="unit-digit" id="seven-min"></span
+                ><span class="unit">°C</span>
+              </p>
             </div>
-            <p class="day_future" id="day-seven"></p>
-            <p class="temp_future">
-              <span class="unit-digit" id="seven-max"></span
-              ><span class="unit">°C</span> /
-              <span class="unit-digit" id="seven-min"></span
-              ><span class="unit">°C</span>
-            </p>
           </div>
         </div>
       </div>

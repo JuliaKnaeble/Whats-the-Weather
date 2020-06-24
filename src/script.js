@@ -1,4 +1,10 @@
 // displaying the value of the search and calls forcast api -> function show forcast
+function handleError() {
+  document.getElementsByClassName("main-page-info")[0].style.visibility =
+    "hidden";
+  document.querySelector(`#city`).innerHTML = "Hello";
+}
+
 function showTemp(response) {
   let city = document.querySelector(`#city`);
   city.innerHTML = response.data.name;
@@ -79,13 +85,13 @@ function showTime(response) {
     `Fri`,
     `Sat`,
   ];
-  let future = futureDays[response.data.day_of_week + 1];
-  let futurePlusOne = futureDays[response.data.day_of_week + 2];
-  let futurePlusTwo = futureDays[response.data.day_of_week + 3];
-  let futurePlusThree = futureDays[response.data.day_of_week + 4];
-  let futurePlusFour = futureDays[response.data.day_of_week + 5];
-  let futurePlusFive = futureDays[response.data.day_of_week + 6];
-  let futurePlusSix = futureDays[response.data.day_of_week + 7];
+  let future = futureDays[response.data.day_of_week];
+  let futurePlusOne = futureDays[response.data.day_of_week + 1];
+  let futurePlusTwo = futureDays[response.data.day_of_week + 2];
+  let futurePlusThree = futureDays[response.data.day_of_week + 3];
+  let futurePlusFour = futureDays[response.data.day_of_week + 4];
+  let futurePlusFive = futureDays[response.data.day_of_week + 5];
+  let futurePlusSix = futureDays[response.data.day_of_week + 6];
   document.querySelector(`#today`).innerHTML = `${future}`;
   document.querySelector(`#tomorrow`).innerHTML = `${futurePlusOne}`;
   document.querySelector(`#day-three`).innerHTML = `${futurePlusTwo}`;
@@ -136,37 +142,37 @@ function showForcast(response) {
   cSevenMin = Math.round(response.data.daily[6].temp.min);
   document.querySelector(`#seven-min`).innerHTML = cSevenMin;
 
-  let smallIconOne = response.data.daily[1].weather[0].icon;
+  let smallIconOne = response.data.daily[0].weather[0].icon;
   document
     .querySelector(`#cond-i-s-one`)
     .setAttribute("src", `asset/${smallIconOne}.png`);
 
-  let smallIconTwo = response.data.daily[2].weather[0].icon;
+  let smallIconTwo = response.data.daily[1].weather[0].icon;
   document
     .querySelector(`#cond-i-s-two`)
     .setAttribute("src", `asset/${smallIconTwo}.png`);
 
-  let smallIconThree = response.data.daily[3].weather[0].icon;
+  let smallIconThree = response.data.daily[2].weather[0].icon;
   document
     .querySelector(`#cond-i-s-three`)
     .setAttribute("src", `asset/${smallIconThree}.png`);
 
-  let smallIconFour = response.data.daily[4].weather[0].icon;
+  let smallIconFour = response.data.daily[3].weather[0].icon;
   document
     .querySelector(`#cond-i-s-four`)
     .setAttribute("src", `asset/${smallIconFour}.png`);
 
-  let smallIconFive = response.data.daily[5].weather[0].icon;
+  let smallIconFive = response.data.daily[4].weather[0].icon;
   document
     .querySelector(`#cond-i-s-five`)
     .setAttribute("src", `asset/${smallIconFive}.png`);
 
-  let smallIconSix = response.data.daily[6].weather[0].icon;
+  let smallIconSix = response.data.daily[5].weather[0].icon;
   document
     .querySelector(`#cond-i-s-six`)
     .setAttribute("src", `asset/${smallIconSix}.png`);
 
-  let smallIconSeven = response.data.daily[7].weather[0].icon;
+  let smallIconSeven = response.data.daily[6].weather[0].icon;
   document
     .querySelector(`#cond-i-s-seven`)
     .setAttribute("src", `asset/${smallIconSeven}.png`);
@@ -214,7 +220,7 @@ function showForcast(response) {
     document.querySelector(`#main-circle`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempOne = Math.round(response.data.daily[1].temp.max);
+  let upcommingTempOne = Math.round(response.data.daily[0].temp.max);
   if (upcommingTempOne >= 44) {
     document.querySelector(`#circle-one`).style.backgroundColor = `#801109`;
   } else if (upcommingTempOne >= 40) {
@@ -257,7 +263,7 @@ function showForcast(response) {
     document.querySelector(`#circle-one`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempTwo = Math.round(response.data.daily[2].temp.max);
+  let upcommingTempTwo = Math.round(response.data.daily[1].temp.max);
   if (upcommingTempTwo >= 44) {
     document.querySelector(`#circle-two`).style.backgroundColor = `#801109`;
   } else if (upcommingTempTwo >= 40) {
@@ -300,7 +306,7 @@ function showForcast(response) {
     document.querySelector(`#circle-two`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempThree = Math.round(response.data.daily[3].temp.max);
+  let upcommingTempThree = Math.round(response.data.daily[2].temp.max);
   if (upcommingTempThree >= 44) {
     document.querySelector(`#circle-three`).style.backgroundColor = `#801109`;
   } else if (upcommingTempThree >= 40) {
@@ -343,7 +349,7 @@ function showForcast(response) {
     document.querySelector(`#circle-three`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempFour = Math.round(response.data.daily[4].temp.max);
+  let upcommingTempFour = Math.round(response.data.daily[3].temp.max);
   if (upcommingTempFour >= 44) {
     document.querySelector(`#circle-four`).style.backgroundColor = `#801109`;
   } else if (upcommingTempFour >= 40) {
@@ -386,7 +392,7 @@ function showForcast(response) {
     document.querySelector(`#circle-four`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempFive = Math.round(response.data.daily[5].temp.max);
+  let upcommingTempFive = Math.round(response.data.daily[4].temp.max);
   if (upcommingTempFive >= 44) {
     document.querySelector(`#circle-five`).style.backgroundColor = `#801109`;
   } else if (upcommingTempFive >= 40) {
@@ -429,7 +435,7 @@ function showForcast(response) {
     document.querySelector(`#circle-five`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempSix = Math.round(response.data.daily[6].temp.max);
+  let upcommingTempSix = Math.round(response.data.daily[5].temp.max);
   if (upcommingTempSix >= 44) {
     document.querySelector(`#circle-six`).style.backgroundColor = `#801109`;
   } else if (upcommingTempSix >= 40) {
@@ -472,7 +478,7 @@ function showForcast(response) {
     document.querySelector(`#circle-six`).style.backgroundColor = `#2306AA`;
   }
 
-  let upcommingTempSeven = Math.round(response.data.daily[7].temp.max);
+  let upcommingTempSeven = Math.round(response.data.daily[6].temp.max);
   if (upcommingTempSeven >= 44) {
     document.querySelector(`#circle-seven`).style.backgroundColor = `#801109`;
   } else if (upcommingTempSeven >= 40) {
@@ -521,7 +527,7 @@ function search(city) {
   let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
   let openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather`;
   let url = `${openWeatherUrl}?q=${city}&appid=${apiKeyWeather}&units=metric`;
-  axios.get(url).then(showTemp);
+  axios.get(url).then(showTemp).catch(handleError);
 }
 
 //storing the value of the search on mainPage-> function search
@@ -624,16 +630,6 @@ function convertUnitFahrenheit(event) {
   unit.forEach(function (change) {
     change.innerHTML = `°F`;
   });
-
-  //let latitude = response.data.coord.lat;
-  //let longitude = response.data.coord.lon;
-  //let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
-  //let weatherForcastUrl = `https://api.openweathermap.org/data/2.5/onecall`;
-  //axios
-  //  .get(
-  //   `${weatherForcastUrl}?lat=${latitude}&lon=${longitude}&appid=${apiKeyWeather}&units=imperial`
-  // )
-  //  .then(showForcastFahrenheit);
 }
 
 //Convert to Celcius
