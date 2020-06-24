@@ -4,7 +4,7 @@ function handleError() {
     "hidden";
   document.getElementsByClassName("error")[0].style.visibility = "visible";
   document.querySelector(`#error-message`).innerHTML =
-    "Looks like you got lost...";
+    "Oops, looks like you got lost. <br> Try again.";
 }
 
 function showTemp(response) {

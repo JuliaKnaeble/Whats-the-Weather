@@ -50,6 +50,16 @@ ul {
   background-color: #f4f4f4;
 }
 
+.gradient_overlay {
+  width: 200px;
+  height: 200px;
+  display: block;
+  border-radius: 50%;
+  background: linear-gradient(-25deg, transparent, rgba(255, 255, 255, 0.4));
+  background-blend-mode: screen;
+  z-index: 10;
+}
+
 .col {
   text-align: center;
 }
@@ -81,6 +91,16 @@ ul {
   display: block;
   margin: 0 auto;
   background-color: #f4f4f4;
+}
+
+.gradient_overlay_small {
+  border-radius: 50%;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(-25deg, transparent, rgba(255, 255, 255, 0.4));
+  background-blend-mode: screen;
+  z-index: 10;
 }
 
 .widgetContainer {
@@ -281,7 +301,7 @@ textarea {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 48px;
   letter-spacing: -0.11px;
   color: #465866;
 }
