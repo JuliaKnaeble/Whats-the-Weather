@@ -276,3 +276,12 @@ textarea {
   width: 40px;
   height: 40px;
 }
+
+.error {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  letter-spacing: -0.11px;
+  color: #465866;
+}

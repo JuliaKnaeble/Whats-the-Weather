@@ -2,7 +2,9 @@
 function handleError() {
   document.getElementsByClassName("main-page-info")[0].style.visibility =
     "hidden";
-  document.querySelector(`#city`).innerHTML = "Hello";
+  document.getElementsByClassName("error")[0].style.visibility = "visible";
+  document.querySelector(`#error-message`).innerHTML =
+    "Looks like you got lost...";
 }
 
 function showTemp(response) {
