@@ -1,17 +1,17 @@
-// displaying the value of the search and calls forcast api -> function show forcast
+// error handling
 function handleError() {
-  document.getElementsByClassName("main-page-info")[0].style.visibility =
+  document.getElementsByClassName("main-content-wrapper")[0].style.visibility =
     "hidden";
   document.getElementsByClassName("error")[0].style.visibility = "visible";
   document.querySelector(`#error-message`).innerHTML =
     "Oops, looks like you got lost. <br> Try again.";
 }
 
+// displaying the value of the search and calls forecast api -> function show forecast
 function showTemp(response) {
-  let city = document.querySelector(`#city`);
-  city.innerHTML = response.data.name;
+  document.querySelector(`#city`).innerHTML = response.data.name;
   celciusTemp = Math.round(response.data.main.temp);
-  document.querySelector(`#current-temp`).innerHTML = celciusTemp;
+  document.querySelector(`#temp`).innerHTML = celciusTemp;
   document.querySelector(`#weather-condition`).innerHTML =
     response.data.weather[0].description;
   document.querySelector(`#current-wind`).innerHTML = Math.round(
@@ -23,18 +23,18 @@ function showTemp(response) {
 
   let mainConditionIcon = response.data.weather[0].icon;
   document
-    .querySelector(`#condiotion-i-main`)
+    .querySelector(`#condiotion-icon-main`)
     .setAttribute("src", `asset/${mainConditionIcon}.png`);
 
   let latitude = response.data.coord.lat;
   let longitude = response.data.coord.lon;
   let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
-  let weatherForcastUrl = `https://api.openweathermap.org/data/2.5/onecall`;
+  let weatherForecastUrl = `https://api.openweathermap.org/data/2.5/onecall`;
   axios
     .get(
-      `${weatherForcastUrl}?lat=${latitude}&lon=${longitude}&appid=${apiKeyWeather}&units=metric`
+      `${weatherForecastUrl}?lat=${latitude}&lon=${longitude}&appid=${apiKeyWeather}&units=metric`
     )
-    .then(showForcast);
+    .then(showForecast);
 }
 
 // presenting local time
@@ -103,8 +103,8 @@ function showTime(response) {
   document.querySelector(`#day-seven`).innerHTML = `${futurePlusSix}`;
 }
 
-// displays forcast result & color & set api for local time
-function showForcast(response) {
+// displays forecast result & color & set api for local time
+function showForecast(response) {
   let timezone = response.data.timezone;
   let timeUrl = `https://worldtimeapi.org/api/timezone/`;
   axios.get(`${timeUrl}${timezone}`).then(showTime);
@@ -146,37 +146,37 @@ function showForcast(response) {
 
   let smallIconOne = response.data.daily[0].weather[0].icon;
   document
-    .querySelector(`#cond-i-s-one`)
+    .querySelector(`#icon-one`)
     .setAttribute("src", `asset/${smallIconOne}.png`);
 
   let smallIconTwo = response.data.daily[1].weather[0].icon;
   document
-    .querySelector(`#cond-i-s-two`)
+    .querySelector(`#icon-two`)
     .setAttribute("src", `asset/${smallIconTwo}.png`);
 
   let smallIconThree = response.data.daily[2].weather[0].icon;
   document
-    .querySelector(`#cond-i-s-three`)
+    .querySelector(`#icon-three`)
     .setAttribute("src", `asset/${smallIconThree}.png`);
 
   let smallIconFour = response.data.daily[3].weather[0].icon;
   document
-    .querySelector(`#cond-i-s-four`)
+    .querySelector(`#icon-four`)
     .setAttribute("src", `asset/${smallIconFour}.png`);
 
   let smallIconFive = response.data.daily[4].weather[0].icon;
   document
-    .querySelector(`#cond-i-s-five`)
+    .querySelector(`#icon-five`)
     .setAttribute("src", `asset/${smallIconFive}.png`);
 
   let smallIconSix = response.data.daily[5].weather[0].icon;
   document
-    .querySelector(`#cond-i-s-six`)
+    .querySelector(`#icon-six`)
     .setAttribute("src", `asset/${smallIconSix}.png`);
 
   let smallIconSeven = response.data.daily[6].weather[0].icon;
   document
-    .querySelector(`#cond-i-s-seven`)
+    .querySelector(`#icon-seven`)
     .setAttribute("src", `asset/${smallIconSeven}.png`);
 
   let currentTemp = Math.round(response.data.current.temp);
@@ -557,7 +557,7 @@ function firstSearchCity(event) {
 }
 
 // when searching for a city on welcomingPage-> function searchCity
-let initalSearch = document.querySelector(`#first-search`);
+let initalSearch = document.querySelector(`#search`);
 if (initalSearch) {
   initalSearch.addEventListener(`submit`, firstSearchCity);
 }
@@ -591,7 +591,7 @@ function convertUnitFahrenheit(event) {
     .querySelector(`#unitFahrenheit`)
     .classList.replace("fahrenheit", "f-selected");
   let convertUnit = Math.round((celciusTemp * 9) / 5 + 32);
-  document.querySelector(`#current-temp`).innerHTML = convertUnit;
+  document.querySelector(`#temp`).innerHTML = convertUnit;
 
   let convertOneMax = Math.round((cOneMax * 9) / 5 + 32);
   document.querySelector(`#one-max`).innerHTML = convertOneMax;
@@ -647,7 +647,7 @@ function convertUnitCelcius(event) {
   document
     .querySelector(`#unitCelcius`)
     .classList.replace("celcius", "c-selected");
-  document.querySelector(`#current-temp`).innerHTML = celciusTemp;
+  document.querySelector(`#temp`).innerHTML = celciusTemp;
   document.querySelector(`#one-max`).innerHTML = cOneMax;
   document.querySelector(`#one-min`).innerHTML = cOneMin;
   document.querySelector(`#two-max`).innerHTML = cTwoMax;
