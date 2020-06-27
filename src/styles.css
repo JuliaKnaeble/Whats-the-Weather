@@ -59,6 +59,7 @@ textarea {
   text-align: left;
   font-weight: 500;
   color: #465866;
+  text-decoration: none;
 }
 
 .search-icon {
@@ -105,10 +106,10 @@ textarea {
 
 @media (max-width: 1000px) {
   .page-name {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   a {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   input {
@@ -121,7 +122,7 @@ textarea {
   }
   .conversion-f,
   .conversion-c {
-    font-size: 1.25rem;
+    font-size: 1rem;
     height: 35px;
     width: 35px;
     line-height: 35px;
@@ -135,16 +136,16 @@ textarea {
   .header {
     flex-direction: column;
     align-items: center;
-    height: 200px;
+    height: 150px;
   }
   .page-name {
-    margin-top: 20px;
+    margin-left: 20px;
   }
   .page-name-welcome-xs {
     width: 100%;
     left: 0;
+    margin: 0;
     text-align: center;
-    margin-top: 20px;
   }
   .conversion-f,
   .conversion-c {
@@ -152,13 +153,18 @@ textarea {
     height: 30px;
     width: 30px;
     line-height: 30px;
-    margin-top: 20px;
+    margin-right: 20px;
   }
   .conversion-c {
     right: 55px;
   }
   input {
-    margin-top: 45px;
+    margin-top: 20px;
+    margin: 0 auto;
+    display: block;
+  }
+  .search-icon {
+    top: 38px;
   }
 }
 
@@ -198,14 +204,14 @@ textarea {
 
 @media (max-width: 675px) {
   .city-name {
-    font-size: 2.75rem;
-    height: 65px;
+    font-size: 2.25rem;
+    height: 55px;
     margin: 0;
   }
 
   .condition,
   .local-date {
-    font-size: 0.75rem;
+    font-size: 1rem;
     height: 20px;
   }
 }
@@ -274,6 +280,7 @@ ul {
   .current-weather {
     height: 100px;
     margin-bottom: 80px;
+    margin-top: 30px;
   }
   .big-circle,
   .gradient-overlay {
@@ -287,12 +294,12 @@ ul {
     height: 40px;
   }
   ul {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     margin-left: 15px;
     width: 100px;
   }
   .current-temp {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     width: 100px;
     margin-right: 15px;
   }
@@ -455,14 +462,14 @@ ul {
 
 @media (max-width: 675px) {
   .small-circle {
-    width: 40px;
-    height: 40px;
+    width: 33px;
+    height: 33px;
   }
   .condition-icon-small {
-    top: 20px;
-    left: 25px;
-    width: 20px;
-    height: 20px;
+    top: 15px;
+    left: 19px;
+    width: 16px;
+    height: 16px;
   }
   .day-future {
     padding-top: 8px;
