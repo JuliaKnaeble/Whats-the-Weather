@@ -31,8 +31,11 @@
       </div>
       <div class="search-form">
         <form id="search">
-          <i class="fas fa-search search-icon"></i>
+          <button>
+            <i class="fas fa-search search-icon"></i>
+          </button>
           <input
+            class="text-input"
             type="text"
             id="first-city-search"
             placeholder="Search for a city"
@@ -74,7 +77,7 @@
 
         <div>
           <ul>
-            <li>Humidity:&nbsp <span id="current-humidity"></span>%</li>
+            <li>Humid:&nbsp <span id="current-humidity"></span>%</li>
             <li>Wind:&nbsp <span id="current-wind"></span>km/h</li>
           </ul>
         </div>
@@ -93,8 +96,9 @@
           </div>
           <p class="day-future" id="today"></p>
           <p class="temp-future">
-            <span id="one-max"></span><span class="unit">°C</span> /
-            <span id="one-min"></span><span class="unit">°C</span>
+            <span id="one-max"></span><span class="unit">°C</span> |
+            <span class="future-low-temp" id="one-min"></span
+            ><span class="future-low-temp unit">°C</span>
           </p>
         </div>
 
@@ -110,8 +114,9 @@
           </div>
           <p class="day-future" id="tomorrow"></p>
           <p class="temp-future">
-            <span id="two-max"></span><span class="unit">°C</span> /
-            <span id="two-min"></span><span class="unit">°C</span>
+            <span id="two-max"></span><span class="unit">°C</span> |
+            <span class="future-low-temp" id="two-min"></span
+            ><span class="future-low-temp unit">°C</span>
           </p>
         </div>
 
@@ -127,8 +132,9 @@
           </div>
           <p class="day-future" id="day-three"></p>
           <p class="temp-future">
-            <span id="three-max"></span><span class="unit">°C</span> /
-            <span id="three-min"></span><span class="unit">°C</span>
+            <span id="three-max"></span><span class="unit">°C</span> |
+            <span class="future-low-temp" id="three-min"></span
+            ><span class="future-low-temp unit">°C</span>
           </p>
         </div>
 
@@ -144,8 +150,9 @@
           </div>
           <p class="day-future" id="day-four"></p>
           <p class="temp-future">
-            <span id="four-max"></span><span class="unit">°C</span> /
-            <span id="four-min"></span><span class="unit">°C</span>
+            <span id="four-max"></span><span class="unit">°C</span> |
+            <span class="future-low-temp" id="four-min"></span
+            ><span class="future-low-temp unit">°C</span>
           </p>
         </div>
 
@@ -161,8 +168,9 @@
           </div>
           <p class="day-future" id="day-five"></p>
           <p class="temp-future">
-            <span id="five-max"></span><span class="unit">°C</span> /
-            <span id="five-min"></span><span class="unit">°C</span>
+            <span id="five-max"></span><span class="unit">°C</span> |
+            <span class="future-low-temp" id="five-min"></span
+            ><span class="future-low-temp unit">°C</span>
           </p>
         </div>
 
@@ -178,8 +186,9 @@
           </div>
           <p class="day-future" id="day-six"></p>
           <p class="temp-future">
-            <span id="six-max"></span><span class="unit">°C</span> /
-            <span id="six-min"></span><span class="unit">°C</span>
+            <span id="six-max"></span><span class="unit">°C</span> |
+            <span class="future-low-temp" id="six-min"></span
+            ><span class="future-low-temp unit">°C</span>
           </p>
         </div>
 
@@ -195,19 +204,12 @@
           </div>
           <p class="day-future" id="day-seven"></p>
           <p class="temp-future">
-            <span id="seven-max"></span><span class="unit">°C</span> /
-            <span id="seven-min"></span><span class="unit">°C</span>
+            <span id="seven-max"></span><span class="unit">°C</span> |
+            <span class="future-low-temp" id="seven-min"></span
+            ><span class="future-low-temp unit">°C</span>
           </p>
         </div>
       </div>
-      <footer>
-        Made by Julia K. 2020. Code on
-        <a
-          href="https://github.com/JuliaKnaeble/Whats-the-Weather"
-          target="_blank"
-          >GitHub</a
-        >
-      </footer>
     </div>
     <script src="src/script.js"></script>
   </body>
