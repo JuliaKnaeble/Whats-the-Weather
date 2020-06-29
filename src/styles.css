@@ -68,9 +68,9 @@ button {
   padding: 8px;
   border: none;
 }
-
-button::selection {
-  border: none;
+button:active,
+button:focus {
+  outline: none;
 }
 
 .search-icon {
