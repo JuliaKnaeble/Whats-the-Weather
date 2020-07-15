@@ -28,7 +28,7 @@ function showTemp(response) {
 
   let latitude = response.data.coord.lat;
   let longitude = response.data.coord.lon;
-  let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
+  let apiKeyWeather = `fb824760b8284df918fb279cb2fc9377`;
   let weatherForecastUrl = `https://api.openweathermap.org/data/2.5/onecall`;
   axios
     .get(
@@ -526,7 +526,7 @@ function showForecast(response) {
 
 // Makes the api call on load & on search mainPage-> function show Temp
 function search(city) {
-  let apiKeyWeather = `e4d700d9f2e204bb797d9166314fc0ba`;
+  let apiKeyWeather = `fb824760b8284df918fb279cb2fc9377`;
   let openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather`;
   let url = `${openWeatherUrl}?q=${city}&appid=${apiKeyWeather}&units=metric`;
   axios.get(url).then(showTemp).catch(handleError);
